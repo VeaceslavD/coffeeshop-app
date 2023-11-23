@@ -1,0 +1,79 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+  padding: 8px;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.productCard a {
+  text-decoration: none;
+}
+
+.productCard img {
+  width: 290px;
+}
+
+.productCardInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.productCardInformation h2 {
+  color: #000;
+  font-family: Bree Serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.productCardInformation h3 {
+  color: #c7a17a;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.productCardInformation h4 {
+  color: #a7a7a7;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.buttonActions {
+  display: flex;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.buttonActions button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.buttonActions img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #6c6c6c;
+  border-radius: 3px;
+}
+
+.buttonActions img:hover {
+  background:#ddd;
+}
+

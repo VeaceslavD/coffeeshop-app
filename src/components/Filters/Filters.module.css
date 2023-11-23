@@ -1,0 +1,74 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 50px;
+  background-color: rgb(238, 238, 238);
+  padding: 30px 0;
+  position: sticky;
+}
+
+.filtersContainer {
+  display: block;
+  position: relative;
+}
+
+.filtersContainer button {
+  padding: 12px 15px;
+  border: 0;
+  border-bottom: 1px solid #807d7d;
+  border-top: 1px solid #807d7d;
+  cursor: pointer;
+  color: #666;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+
+.listFilter {
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  display: none;
+  border: 1px solid #000;
+}
+
+.listFilter li {
+  list-style: none;
+  cursor: pointer;
+  color: #666;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+}
+
+.listFilter li:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.filtersContainer:hover .listFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filtersContainer button:hover {
+  color: #0770cf;
+  border-color: #0770cf;;
+}
+
