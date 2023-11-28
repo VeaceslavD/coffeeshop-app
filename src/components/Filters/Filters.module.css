@@ -5,15 +5,15 @@
   gap: 50px;
   background-color: rgb(238, 238, 238);
   padding: 30px 0;
-  position: sticky;
 }
 
 .filtersContainer {
-  display: block;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.filtersContainer button {
+.filtersContainer select {
   padding: 12px 15px;
   border: 0;
   border-bottom: 1px solid #807d7d;
@@ -27,26 +27,18 @@
   line-height: normal;
   display: flex;
   align-items: center;
-  gap: 100px;
 }
-
 
 .listFilter {
   padding: 10px;
-  position: absolute;
   z-index: 1;
   background: #fff;
-  width: 300px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  display: none;
   border: 1px solid #000;
-}
-
-.listFilter li {
   list-style: none;
-  cursor: pointer;
   color: #666;
   font-family: Inter;
   font-size: 14px;
@@ -57,18 +49,65 @@
   padding: 10px;
 }
 
-.listFilter li:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.filtersContainer select:hover {
+  border-color: #0770cf;
 }
 
-.filtersContainer:hover .listFilter {
+.filtersContainer button {
+  border: 1px solid #807d7d;
+  padding: 12px 15px;
+  cursor: pointer;
+  color: #666;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.filtersContainer button:hover {
+  border-color: #0770cf;
+  color: #0770cf;
+}
+
+.sortContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.filtersContainer button:hover {
-  color: #0770cf;
-  border-color: #0770cf;;
+.sortContainer button {
+  padding: 12px 15px;
+  border: 0;
+  border-bottom: 1px solid #807d7d;
+  border-top: 1px solid #807d7d;
+  cursor: pointer;
+  color: #666;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}
+
+.listSort {
+  padding: 10px;
+  z-index: 1;
+  background: #fff;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #000;
+  list-style: none;
+  color: #666;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
 }
 

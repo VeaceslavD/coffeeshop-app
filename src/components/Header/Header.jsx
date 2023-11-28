@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
 import classes from "./Header.module.css";
-import cartIcon from "../../assets/media/cartIcon.svg";
-import userIcon from "../../assets/media/user.svg";
-import favoriteIcon from "../../assets/media/favorite.svg";
-import searchIcon from "../../assets/media/search.svg";
-import Logo from "../../assets/media/logo.png";
 
 function Header() {
     return (
@@ -19,21 +14,21 @@ function Header() {
             </div>
 
             <div className={classes.header}>
-                <Link to="/"><img className={classes.logoImg} src={Logo} alt="Logo" /></Link>
+                <Link to="/"><img className={classes.logoImg} src="/assets/media/logo.png" alt="Logo" /></Link>
 
                 <h1>HUMAN COFFEE INTERACTION</h1>
 
                 <div className={classes.widgets}>
                     <Link>
-                        <img src={userIcon} alt="UserIcon" />
+                        <img src="/assets/media/user.svg" alt="UserIcon" />
                     </Link>
 
                     <Link>
-                        <img src={favoriteIcon} alt="favoriteIcon" />
+                        <img src="/assets/media/favorite.svg" alt="favoriteIcon" />
                     </Link>
 
                     <Link>
-                        <img src={cartIcon} alt="Cart" />
+                        <img src="/assets/media/cartIcon.svg" alt="Cart" />
                     </Link>
                 </div>
             </div>
@@ -41,7 +36,7 @@ function Header() {
             <nav className={classes.navContainer}>
                 <ul>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/menu">Menu</Link></li>
+                    <li><Link to="/products/all">Products</Link></li>
                     <li><Link to="/">Blog</Link></li>
                 </ul>
 
@@ -49,7 +44,7 @@ function Header() {
                     <input type="text" placeholder="Search for item or brands" />
 
                     <Link>
-                        <img src={searchIcon} alt="searchIcon" />
+                        <img src="/assets/media/search.svg" alt="searchIcon" />
                     </Link>
                 </div>
             </nav>

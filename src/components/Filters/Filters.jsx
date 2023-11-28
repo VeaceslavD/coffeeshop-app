@@ -1,118 +1,62 @@
 import classes from "./Filters.module.css";
-import { filterByBrand, filterByCategory, filterByCountry, filterByWeight, getProducts, sortPriceHighToLow, sortPriceLowToHigh } from "../../routes/Menu/Menu.services";
-import arrowIcon from "../../assets/media/arrow.svg"
+import { useEffect, useState } from "react";
 
 function Filters(props) {
-    const brands = ['Lavazza', 'Julius Meinl', 'Illy', 'Melitta'];
-    const countries = ['Italy', 'Germany', 'Hungary', 'Austria'];
-    const categories = ['Whole beans', 'Ground beans', 'Capsules'];
-    const weights = ['1kg', '500g', '250g', '125g'];
+    const [filters, setFilters] = useState({
+        brand: '',
+        category: '',
+        weight: '',
+        sort: '',
+    });
 
-    const handleSortPriceHighToLow = () => {
-        const dataProducts = getProducts();
-        const sortedProducts = sortPriceHighToLow(dataProducts);
+    useEffect(() => {
+        props.handleFilters(filters);
 
-        props.setProducts(sortedProducts);
-    };
+    }, [filters]);
 
-    const handleSortPriceLowToHigh = () => {
-        const dataProducts = getProducts();
-        const sortedProducts = sortPriceLowToHigh(dataProducts);
-
-        props.setProducts(sortedProducts);
-    };
-
-    const handleFilterByBrand = (brand) => {
-        const filteredProducts = filterByBrand(brand);
-
-        props.setProducts(filteredProducts);
-    };
-
-    const handleFilterByCountry = (country) => {
-        const filteredProducts = filterByCountry(country);
-
-        props.setProducts(filteredProducts);
-    };
-
-    const handleFilterByCategory = (category) => {
-        const filteredProducts = filterByCategory(category);
-
-        props.setProducts(filteredProducts);
-    };
-
-    const handleFilterByWeight = (weight) => {
-        const filteredProducts = filterByWeight(weight);
-
-        props.setProducts(filteredProducts);
-    };
 
     return (
         <div className={classes.filters}>
             <div className={classes.filtersContainer}>
-                <button>
-                    Sort
-                    <img src={arrowIcon} alt="arrowIcon" />
-                </button>
-                <ul className={classes.listFilter}>
-                    <li onClick={() => handleSortPriceHighToLow()}>Price high to low</li>
-                    <li onClick={() => handleSortPriceLowToHigh()}>Price low to high</li>
-                </ul>
+                <select className={classes.listFilter} value={filters.sort} onChange={(event) => setFilters({ ...filters, sort: event.target.value })}>
+                    <option value="" disabled hidden>Sort</option>
+                    <option value="maxMin">Price high to low</option>
+                    <option value="minMax">Price low to high</option>
+                </select>
             </div>
 
             <div className={classes.filtersContainer}>
-                <button>
-                    Brand
-                    <img src={arrowIcon} alt="arrowIcon" />
-                </button>
-                <ul className={classes.listFilter}>
-                    {brands.map(brand => (
-                        <li key={brand} onClick={() => handleFilterByBrand(brand)}>
-                            {brand}
-                        </li>
-                    ))}
-                </ul>
+                <select className={classes.listFilter} value={filters.brand} onChange={(event) => setFilters({ ...filters, brand: event.target.value })}>
+                    <option value="" disabled hidden>Brand</option>
+                    <option value="Lavazza">Lavazza</option>
+                    <option value="Illy">Illy</option> 
+                    <option value="Julius Meinl">Julius Meinl</option>
+                    <option value="Melitta">Melitta</option>
+                </select>
             </div>
 
             <div className={classes.filtersContainer}>
-                <button>
-                    Country
-                    <img src={arrowIcon} alt="arrowIcon" />
-                </button>
-                <ul className={classes.listFilter}>
-                    {countries.map(country => (
-                        <li key={country} onClick={() => handleFilterByCountry(country)}>
-                            {country}
-                        </li>
-                    ))}
-                </ul>
+                <select className={classes.listFilter} value={filters.category} onChange={(event) => setFilters({ ...filters, category: event.target.value })}>
+                    <option value="" disabled hidden>Category</option>
+                    <option value="wholeBeans">Whole beans</option>
+                    <option value="groundBeans">Ground beans</option>
+                    <option value="capsules">Capsules</option>
+                </select>
             </div>
 
             <div className={classes.filtersContainer}>
-                <button>
-                    Category
-                    <img src={arrowIcon} alt="arrowIcon" />
-                </button>
-                <ul className={classes.listFilter}>
-                    {categories.map(category => (
-                        <li key={category} onClick={() => handleFilterByCategory(category)}>
-                            {category}
-                        </li>
-                    ))}
-                </ul>
+                <select className={classes.listFilter} value={filters.weight} onChange={(event) => setFilters({ ...filters, weight: event.target.value })}>
+                    <option value="" disabled hidden>Weight</option>
+                    <option value="1kg">1kg</option>
+                    <option value="500g">500g</option>
+                    <option value="250g">250g</option>
+                    <option value="125g">125g</option>
+                    <option value="8g">8g</option>
+                </select>
             </div>
 
             <div className={classes.filtersContainer}>
-                <button>
-                    Weight
-                    <img src={arrowIcon} alt="arrowIcon" />
-                </button>
-                <ul className={classes.listFilter}>
-                    {weights.map(weight => (
-                        <li key={weight} onClick={() => handleFilterByWeight(weight)}>
-                            {weight}
-                        </li>
-                    ))}
-                </ul>
+                <button onClick={() => props.handleClearFilters()}>Clear</button>
             </div>
         </div >
     )

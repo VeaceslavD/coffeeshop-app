@@ -1,7 +1,7 @@
 import classes from "./ProductDetails.module.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProductById } from "../Menu/Menu.services";
+import { getProductById } from "../Products/products.services";
 
 function ProductDetails() {
     const [product, setProduct] = useState();
@@ -19,7 +19,7 @@ function ProductDetails() {
             {product && (
                 <>
                     <div className={classes.productDetailsContainer}>
-                        <img src={require(`../../assets/coffeeImage/${product.image}`)}alt={product.image} />
+                        <img src={(`/assets/coffeeImage/${product.image}`)}alt={product.image} />
 
                         <div className={classes.productDetails}>
                             <h1>{product.name}</h1>

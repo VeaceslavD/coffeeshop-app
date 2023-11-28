@@ -10,7 +10,7 @@ const products = [
         country: 'Hungary',
         beans: 'Arabica',
         flavor: 'with a smooth, rich and full-bodied taste',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'illy-Colombia.webp'
     },
     {
@@ -24,7 +24,7 @@ const products = [
         country: 'Italy',
         beans: '100% Arabica',
         flavor: 'With hints of chocolate and exotic fruits.',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Lavazza-Tierra-Colombia.webp'
     },
     {
@@ -38,7 +38,7 @@ const products = [
         country: 'Italy',
         beans: '100% Arabica',
         flavor: 'With hints of berries and dark chocolate.',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Lavazza-Tierra-Selection.webp'
     },
     {
@@ -52,7 +52,7 @@ const products = [
         country: 'Italy',
         beans: '100% Arabica',
         flavor: '',
-        category: 'Whole ground',
+        category: 'groundBeans',
         image: 'Lavazza-Qualità-Oro.webp'
     },
     {
@@ -66,7 +66,7 @@ const products = [
         country: 'Italy',
         beans: '100% Arabica',
         flavor: '',
-        category: 'Capsules',
+        category: 'capsules',
         image: 'Lavazza-Qualità-Oro - Sinfonia-Perfetta.webp'
     },
     {
@@ -80,7 +80,7 @@ const products = [
         country: 'Austria',
         beans: '100% Arabica',
         flavor: 'Medium viscosity and fresh aroma with a delicate sweet taste',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Julius-Meinl-Premium-Espresso-Arabica.webp'
     },
     {
@@ -94,7 +94,7 @@ const products = [
         country: 'Austria',
         beans: 'Arabica and Robusta',
         flavor: 'Chocolatey and balanced',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Julius-Meinl-Trend-Caffe-Crema-Intenso.webp'
     },
     {
@@ -108,7 +108,7 @@ const products = [
         country: 'Austria',
         beans: 'Arabica and Robusta',
         flavor: 'Warm notes of cocoa and dried fruit',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Julius-Meinl-Caffè-Crema-Selezione.webp'
     },
     {
@@ -122,7 +122,7 @@ const products = [
         country: 'Italy',
         beans: 'Arabica and Robusta',
         flavor: 'Chocolate and nutmeg',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Lavazza-Crema-Ricca.webp'
     },
     {
@@ -136,7 +136,7 @@ const products = [
         country: 'Austria',
         beans: 'Arabica and Robusta',
         flavor: 'Rich with notes of dark chocolate and toast',
-        category: 'Ground beans',
+        category: 'groundBeans',
         image: 'Julius-Meinl-Präsident.webp'
     },
     {
@@ -150,7 +150,7 @@ const products = [
         country: 'Austria',
         beans: 'Arabica and Robusta',
         flavor: 'Delicate aroma that lingers in the mouth',
-        category: 'Ground beans',
+        category: 'groundBeans',
         image: 'Julius-Meinl-Jubiläum.webp'
     },
     {
@@ -164,7 +164,7 @@ const products = [
         country: 'Hungary',
         beans: 'Arabica and Robusta',
         flavor: 'caramel notes.',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'illy-Brasile.webp'
     },
     {
@@ -178,7 +178,7 @@ const products = [
         country: 'Hungary',
         beans: 'Arabica',
         flavor: 'Guatemala has a bold taste with hints of chocolate.',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'illy-Arabica-Guatemala.webp'
     },
     {
@@ -192,7 +192,7 @@ const products = [
         country: 'Italy',
         beans: 'Arabica and Robusta',
         flavor: '',
-        category: 'Whole ground',
+        category: 'groundBeans',
         image: 'Lavazza-Crema -Gusto-Classico.webp'
     },
     {
@@ -206,7 +206,7 @@ const products = [
         country: 'Hungary',
         beans: 'Arabica',
         flavor: 'clear chocolate and a caramel flavor with a hint of flowers',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'illy-Classico.webp'
     },
     {
@@ -220,7 +220,7 @@ const products = [
         country: 'Hungary',
         beans: 'Arabica',
         flavor: 'with notes of dark chocolate and an intense aroma of toasted bread',
-        category: 'Capsules',
+        category: 'capsules',
         image: 'illy-Forte-compatibile-Nespresso.webp'
     },
     {
@@ -234,7 +234,7 @@ const products = [
         country: 'Hungary',
         beans: '100% Arabica',
         flavor: 'with warm notes of cocoa and dried fruit',
-        category: 'Capsules',
+        category: 'capsules',
         image: 'illy-Intenso-compatibil-Nespresso.webp'
     },
     {
@@ -248,7 +248,7 @@ const products = [
         country: 'Italy',
         beans: '100% Arabica',
         flavor: 'Notes of chocolate and nutmeg',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Lavazza-Gusto-Forte.webp'
     },
     {
@@ -262,7 +262,7 @@ const products = [
         country: 'Hungary',
         beans: 'Arabica',
         flavor: 'sweet notes of chocolate and berriest',
-        category: 'Ground beans',
+        category: 'groundBeans',
         image: 'illy-Classico-125g.webp'
     },
     {
@@ -276,7 +276,7 @@ const products = [
         country: 'Germany',
         beans: '100% Arabica',
         flavor: 'notes of dark chocolate, berries',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Melitta-Bella-Crema-Espresso.webp'
     },
     {
@@ -290,7 +290,7 @@ const products = [
         country: 'Germany',
         beans: '100% Arabica',
         flavor: 'with distinct notes of dark chocolate, roasted nuts',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Melitta-Bella-Crema-Intenso.webp'
     },
     {
@@ -304,7 +304,7 @@ const products = [
         country: 'Italy',
         beans: 'Arabica and Robusta',
         flavor: 'Intense with shades of hazelnut',
-        category: 'Capsules',
+        category: 'capsules',
         image: 'Lavazza-Crema-e-Gusto.webp'
     },
     {
@@ -318,7 +318,7 @@ const products = [
         country: 'Germany',
         beans: '100% Arabica',
         flavor: 'shades of milk chocolate, fine vanilla and a subtle hint of toasted nuts',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Melitta-Bella-Crema-La-Crema.webp'
     },
     {
@@ -332,7 +332,7 @@ const products = [
         country: 'Italy',
         beans: 'Arabica and Robusta',
         flavor: 'Chocolate and berries',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Lavazza-gusto-pieno.webp'
     },
     {
@@ -346,15 +346,13 @@ const products = [
         country: 'Germany',
         beans: '100% Arabica',
         flavor: 'notes of dark chocolate, berries and a subtle hint of spice',
-        category: 'Whole beans',
+        category: 'wholeBeans',
         image: 'Melitta-Bella-Crema-Speciale.webp'
     },
 ]
 
 export const getProducts = () => {
-    return new Promise(resolve => {
-        setTimeout(() => { resolve(products) }, 1000)
-    });
+    return products;
 }
 
 export const getProductById = (id) => {
@@ -363,33 +361,32 @@ export const getProductById = (id) => {
 
 export const getPopularProducts = () => {
     const selectedItems = [4, 10, 15, 25]
-    return [...products].filter(product => selectedItems.includes(product.id));
+    return products.filter(product => selectedItems.includes(product.id));
 };
 
-export const sortPriceHighToLow = () => {
-    return [...products].sort((a, b) => b.price - a.price);
+export const getProductsByCategory = (category) => {
+    return category === 'all' ? products : products.filter(product => product.category === category);
+}
+
+export const getProductsBySort = (products, sort) => {
+    if (sort === 'maxMin') {
+        return [...products].sort((a, b) => b.price - a.price);
+    };
+
+    if (sort === 'minMax') {
+        return [...products].sort((a, b) => a.price - b.price);
+    };
 };
 
-export const sortPriceLowToHigh = () => {
-    return [...products].sort((a, b) => a.price - b.price);
+export const filterByBrand = (products, brand) => {
+    return products.filter(product => product.brand === brand);
 };
 
-export const filterByBrand = (brand) => {
-    return [...products].filter(product => product.brand === brand);
+export const filterByCategory = (products, category) => {
+    return products.filter(product => product.category === category);
 };
 
-export const filterByCountry = (country) => {
-    return [...products].filter(product => product.country === country);
+export const filterByWeight = (products, weight) => {
+    return products.filter(product => product.weight === weight);
 };
 
-export const filterByCategory = (category) => {
-    return [...products].filter(product => product.category === category);
-};
-
-export const filterByWeight = (weight) => {
-    return [...products].filter(product => product.weight === weight);
-};
-
-export const filterByPrice = (price) => {
-    return [...products].filter(product => product.price === price);
-};

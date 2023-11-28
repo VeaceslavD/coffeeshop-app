@@ -1,13 +1,8 @@
 import classes from "./Home.module.css";
-import wholeBeans from "../../assets/media/Robusta.png";
-import groundBeans from "../../assets/media/ground-coffee.jpg";
-import capsules from "../../assets/media/capsules.webp";
-import ellipseIcon from "../../assets/media/Ellipse 1.png";
-import line7Icon from "../../assets/media/Line 7.png";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getPopularProducts } from "../Menu/Menu.services";
+import { getPopularProducts } from "../Products/products.services";
 
 function Home() {
     const [popularProducts, setPopularProducts] = useState([]);
@@ -34,7 +29,7 @@ function Home() {
                             <h2>HIGHT QUALITY FOR YOU</h2>
                         </div>
 
-                        <Link className={classes.buttonOrder} to="/menu">Order Now</Link>
+                        <Link className={classes.buttonOrder} to="/products/all">Order Now</Link>
                     </div>
 
                 </section>
@@ -62,14 +57,14 @@ function Home() {
                     <h1>START YOUR DAY WITH A BLACK COFFEE</h1>
 
                     <div className={classes.lineImg}>
-                        <img src={line7Icon} alt="lineIcon" />
-                        <img src={line7Icon} alt="lineIcon" />
+                        <img src="/assets/media/Line 7.png" alt="lineIcon" />
+                        <img src="/assets/media/Line 7.png" alt="lineIcon" />
                     </div>
 
                     <div className={classes.startDescr}>
                         <h2>LOCALLY SOURCE</h2>
 
-                        <img src={ellipseIcon} alt="ellipseIcon" />
+                        <img src="/assets/media/Ellipse 1.png" alt="ellipseIcon" />
 
                         <h2>ROASTED WITH LOVE</h2>
                     </div>
@@ -79,9 +74,9 @@ function Home() {
                     <h1>Top Categories</h1>
 
                     <div className={classes.categoriesContainer}>
-                        <Link to="/menu">
+                        <Link to={"/products/wholeBeans"}>
                             <div className={classes.categoriesDescription}>
-                                <img src={wholeBeans} alt="wholeBeans" />
+                                <img src="/assets/media/Robusta.png" alt="wholeBeans" />
                                 <div className={classes.typeCategories}>
                                     <h2>Whole beans</h2>
 
@@ -89,9 +84,9 @@ function Home() {
                                 </div>
                             </div>
                         </Link>
-                        <Link to="/menu">
+                        <Link to="/products/groundBeans">
                             <div className={classes.categoriesDescription}>
-                                <img src={groundBeans} alt="groundBeans" />
+                                <img src="/assets/media/ground-coffee.jpg" alt="groundBeans" />
                                 <div className={classes.typeCategories}>
                                     <h2>Ground beans</h2>
 
@@ -99,9 +94,9 @@ function Home() {
                                 </div>
                             </div>
                         </Link>
-                        <Link to="/menu">
+                        <Link to="/products/capsules">
                             <div className={classes.categoriesDescription}>
-                                <img src={capsules} alt="capsules" />
+                                <img src="/assets/media/capsules.webp" alt="capsules" />
                                 <div className={classes.typeCategories}>
                                     <h2>Capsules</h2>
 

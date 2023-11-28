@@ -12,7 +12,7 @@
 }
 
 .tasteCoffe {
-  background: url("../../assets/media/taste.png"),
+  background: url("/public/assets/media/taste.png"),
     lightgray 50% / cover no-repeat;
   height: 450px;
 }
