@@ -1,0 +1,151 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.deliveryAddress {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: #fff;
+  padding: 20px 30px;
+}
+
+.deliveryInfo {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+}
+
+.about label {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.about input {
+  width: 100%;
+  padding: 10px 5px;
+  border: 0;
+  background: rgba(243, 238, 232, 0.3);
+  font-family: Inter;
+  color: #666;
+  font-size: 13px;
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.city label {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.city input {
+  width: 100%;
+  padding: 10px 5px;
+  border: 0;
+  background: rgba(243, 238, 232, 0.3);
+  font-family: Inter;
+  color: #666;
+  font-size: 13px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.address label {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.address input {
+  width: 100%;
+  padding: 10px 5px;
+  border: 0;
+  background: rgba(243, 238, 232, 0.3);
+  font-family: Inter;
+  color: #666;
+  font-size: 13px;
+}
+
+.additionalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.additionalInfo label {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.additionalInfo textarea {
+  width: 100%;
+  padding: 10px 5px;
+  border: 0;
+  background: rgba(243, 238, 232, 0.3);
+  font-family: Inter;
+  color: #666;
+  font-size: 13px;
+  height: 100px;
+}
+
+.paymentMethod {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+}
+
+.paymentMethodContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
+.paymentMethodContainer select {
+  width: 50%;
+  padding: 10px;
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.paymentMethodContainer select option {
+  padding: 10px;
+}

@@ -353,7 +353,7 @@ const products = [
 
 export const getProducts = () => {
     return products;
-}
+};
 
 export const getProductById = (id) => {
     return products.find(product => product.id === id);
@@ -366,7 +366,12 @@ export const getPopularProducts = () => {
 
 export const getProductsByCategory = (category) => {
     return category === 'all' ? products : products.filter(product => product.category === category);
-}
+};
+
+export const getProductsBySearch = (search) => {
+    const lowerCaseSearch = search.toLowerCase();
+    return products.filter(product => (product.brand || product.name).toLowerCase().includes(lowerCaseSearch));
+};
 
 export const getProductsBySort = (products, sort) => {
     if (sort === 'maxMin') {
@@ -378,15 +383,25 @@ export const getProductsBySort = (products, sort) => {
     };
 };
 
-export const filterByBrand = (products, brand) => {
-    return products.filter(product => product.brand === brand);
-};
+export const getProductsByFilters = (filters) => {
+    let filteredProducts = getProducts();
 
-export const filterByCategory = (products, category) => {
-    return products.filter(product => product.category === category);
-};
+    if (filters.sort) {
+        filteredProducts = getProductsBySort(filteredProducts, filters.sort);
+    };
 
-export const filterByWeight = (products, weight) => {
-    return products.filter(product => product.weight === weight);
+    if (filters.brand) {
+        filteredProducts = products.filter(product => product.brand === filters.brand);
+    };
+
+    if (filters.category) {
+        filteredProducts = products.filter(product => product.category === filters.category);
+    };
+
+    if (filters.weight) {
+        filteredProducts = products.filter(product => product.weight === filters.weight);
+    };
+    
+    return filteredProducts;
 };
 

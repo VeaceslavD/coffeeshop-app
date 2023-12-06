@@ -1,7 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import classes from "./Header.module.css";
+import { useContext, useState } from "react";
+import { CartContext } from "../../contexts/cart.context";
 
 function Header() {
+    const [inputValue, setInputValue] = useState('');
+    const navigate = useNavigate();
+    const cartContext = useContext(CartContext);
+
+    const handleSearch = () => {
+        navigate(`/products/all?search=${inputValue}`);
+        setInputValue('');
+    };
+
+
     return (
         <header className={classes.headerContainer}>
             <div className={classes.infoLinks}>
@@ -23,12 +35,15 @@ function Header() {
                         <img src="/assets/media/user.svg" alt="UserIcon" />
                     </Link>
 
-                    <Link>
+                    <Link to="/favorite">
                         <img src="/assets/media/favorite.svg" alt="favoriteIcon" />
                     </Link>
 
-                    <Link>
-                        <img src="/assets/media/cartIcon.svg" alt="Cart" />
+                    <Link to="/cart">
+                        <div className={classes.cart}>
+                            <img src="/assets/media/cartIcon.svg" alt="Cart" />
+                            <span className={classes.cartCount}>{cartContext.cartCount}</span>
+                        </div>
                     </Link>
                 </div>
             </div>
@@ -41,11 +56,14 @@ function Header() {
                 </ul>
 
                 <div className={classes.searchContainer}>
-                    <input type="text" placeholder="Search for item or brands" />
+                    <input type="text"
+                        placeholder="Search for item or brands"
+                        value={inputValue}
+                        onChange={(event) => setInputValue(event.target.value)} />
 
-                    <Link>
+                    <button onClick={() => handleSearch()}>
                         <img src="/assets/media/search.svg" alt="searchIcon" />
-                    </Link>
+                    </button>
                 </div>
             </nav>
         </header>

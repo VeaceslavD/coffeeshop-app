@@ -1,11 +1,13 @@
 import classes from "./ProductDetails.module.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductById } from "../Products/products.services";
+import { CartContext } from "../../contexts/cart.context";
 
 function ProductDetails() {
     const [product, setProduct] = useState();
     const { id } = useParams();
+    const cartContext = useContext(CartContext);
 
     useEffect(() => {
         const foundProduct = getProductById(+id);
@@ -13,6 +15,9 @@ function ProductDetails() {
         setProduct(foundProduct);
     }, [id])
 
+    const addProductToCart = (product) => {
+        cartContext.addItem(product);
+    };
 
     return (
         <div className={classes.productDetailsPage}>
@@ -28,7 +33,7 @@ function ProductDetails() {
 
                             <h3>{product.price} lei</h3>
 
-                            <button>Add to cart</button>
+                            <button onClick={() => addProductToCart(product)}>Add to cart</button>
 
                             <div className={classes.productSpecifications}>
                                 <h3>Specifications</h3>

@@ -6,15 +6,12 @@ import { getPopularProducts } from "../Products/products.services";
 
 function Home() {
     const [popularProducts, setPopularProducts] = useState([]);
+    const wholeBeans = "wholeBeans";
 
     useEffect(() => {
-        const fetchPopularProducts = () => {
-            const data = getPopularProducts();
+        const data = getPopularProducts();
 
-            setPopularProducts(data);
-        };
-
-        fetchPopularProducts();
+        setPopularProducts(data);
     }, [])
 
 
@@ -42,6 +39,7 @@ function Home() {
                             ? <h2>Loading...</h2>
                             : popularProducts.map(item => (
                                 <ProductCard key={item.id}
+                                    item={item}
                                     id={item.id}
                                     title={item.name}
                                     subTitle={item.short_description}
@@ -74,7 +72,7 @@ function Home() {
                     <h1>Top Categories</h1>
 
                     <div className={classes.categoriesContainer}>
-                        <Link to={"/products/wholeBeans"}>
+                        <Link to={`/products/${wholeBeans}`}>
                             <div className={classes.categoriesDescription}>
                                 <img src="/assets/media/Robusta.png" alt="wholeBeans" />
                                 <div className={classes.typeCategories}>

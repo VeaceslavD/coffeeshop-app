@@ -1,14 +1,28 @@
 import { Link } from "react-router-dom";
 import classes from "./ProductCard.module.css";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/cart.context";
+import { FavoriteContext } from "../../contexts/favorite.context";
 
 function ProductCard(props) {
+    const cartContext = useContext(CartContext);
+    const favoriteContext = useContext(FavoriteContext);
+
+    const addToCart = (item) => {
+        cartContext.addItem(item);
+    };
+
+    const addToFavorite = (item) => {
+        favoriteContext.addFavoriteItem(item);
+    };
+
     return (
         <div className={classes.productCard}>
             <div className={classes.buttonActions}>
-                <button>
+                <button onClick={() => addToCart(props.item)}>
                     <img src="/assets/media/cartIcon2.svg" alt="cartIcon" />
                 </button>
-                <button>
+                <button onClick={() => addToFavorite(props.item)}>
                     <img src="/assets/media/favorite2.svg" alt="favorite" />
                 </button>
             </div>
