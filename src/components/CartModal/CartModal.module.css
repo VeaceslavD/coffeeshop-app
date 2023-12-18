@@ -1,0 +1,188 @@
+.cartModal {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 40px;
+  right: -14px;
+  background: #fff;
+  z-index: 2;
+  transform-origin: top;
+  transform: scaleY(1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.cartModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f8f8f8;
+}
+
+.cartModalHeader h2 {
+  color: #000;
+  font-family: League Spartan;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  display: flex;
+  gap: 20px;
+}
+
+.cartModalHeader h2 span {
+  color: #000000a4;
+  font-family: League Spartan;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.closeModal {
+  font-size: 30px;
+  color: #666;
+  cursor: pointer;
+}
+
+.closeModal:hover {
+  color: rgb(156, 5, 5);
+}
+
+
+.cartModalItems {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+.cartModalItemsDetails {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cartModalItemsDetails a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.cartModalItemsDetails img {
+  width: 100px;
+}
+
+.aboutItem {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+
+.aboutItem h2 {
+  color: #000;
+  font-family: League Spartan;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.aboutItem h3 {
+  color: #000000a4;
+  font-family: League Spartan;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.aboutItem:hover h2,
+.aboutItem:hover h3 {
+  color: #0770cf;
+}
+
+.deleteItem {
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+}
+
+.deleteItem:hover {
+  color: red;
+}
+
+.cartModal h4 {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #f8f8f8;
+}
+
+.cartModal h4 span {
+  color: #000000a4;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.cartModalLinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: #eee;
+}
+
+.cartModalLinks .viewBagLink {
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px;
+  cursor: pointer;
+}
+.viewBagLink:hover {
+  background: #ddd;
+}
+
+.cartModalLinks .checkoutLink {
+  text-decoration: none;
+  background: #018849;
+  color: #fff;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.checkoutLink:hover {
+  background-color: #006637;
+}

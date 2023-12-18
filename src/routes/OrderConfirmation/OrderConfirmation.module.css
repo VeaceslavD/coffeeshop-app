@@ -1,0 +1,133 @@
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+  gap: 50px;
+}
+
+.headerConfirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 60%;
+  text-align: center;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #000;
+}
+
+.headerConfirmation h1 {
+  color: #000;
+  font-family: Overlock;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.orderDetailsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.orderDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.orderDetails h1 {
+  color: #000;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.orderDetails h3 {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: end;
+}
+
+.productDetails {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.productDetails img {
+  width: 150px;
+}
+
+.aboutProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.aboutProduct h3 {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.aboutProduct p {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userDetails h1 {
+  color: #000;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.userDetails ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userDetails ul li {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.userDetails ul li span {
+  color: #0000009f;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

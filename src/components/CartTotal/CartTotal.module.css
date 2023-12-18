@@ -1,0 +1,88 @@
+.cartTotal {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 20px 30px;
+  width: 24%;
+}
+
+.cartTotal h1 {
+  color: #000;
+  font-family: Overlock;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cartTotal h3 {
+  color: #000;
+  font-family: Overlock;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.cartTotal h3 span {
+  color: #a29696;
+  font-size: 17px;
+}
+
+.cartTotal button {
+  background: #018849;
+  color: #fff;
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 0;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.payment h4 {
+  color: #000;
+  font-family: Overlock;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.imgCards {
+  display: flex;
+  justify-content: space-between;
+  background: #ddd;
+  gap: 15px;
+  padding: 5px;
+}
+
+.imgCards img {
+  width: 48px;
+}
+
+.cartTotal button:hover {
+  background-color: #006637;
+}

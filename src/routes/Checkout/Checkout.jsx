@@ -1,34 +1,30 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
+import { useNavigate } from "react-router-dom";
 import classes from "./Checkout.module.css";
 import Form from "../../components/FormTemplate/Form";
-import { CartContext } from "../../contexts/cart.context";
+import { CartContext } from "../../contexts/CartContext";
+import { placeOrder, orders } from "../../services/orders.services";
 
 function Checkout() {
-    const cartContext = useContext(CartContext);
-    const cartItems = cartContext.items;
-    const [items, setItems] = useState([]);
-    const [orders, setOrders] = useState([]);
-
-
-    useEffect(() => {
-        setItems([...cartItems]);
-
-    }, [cartItems]);
-
-    console.log(cartItems);
+    const {items, subTotal, removeAllItems} = useContext(CartContext);
+    const navigate = useNavigate();
+    const cartItems = items;
+    const orderTotalPrice = subTotal;
+    const totalItems = cartItems.reduce((total, item) => total +  item.quantity, 0);
 
     const handlePlaceOrder = (userDetails) => {
         const order = {
-            id: orders.length,
-            products: items,
-            userDetails: userDetails
+            id: orders.length + 1,
+            products: cartItems,
+            userDetails: userDetails,
+            orderTotalPrice: orderTotalPrice
         };
 
-        setOrders([...orders, order]);
-        console.log(orders);
+        placeOrder(order);
+        navigate("/confirmation/" + order.id);
+        removeAllItems();
     };
-
-
+    
     return (
         <div className={classes.checkout}>
             <div className={classes.checkoutContainer}>
@@ -36,19 +32,15 @@ function Checkout() {
                     <h1>Checkout</h1>
 
                     <Form handlePlaceOrder={handlePlaceOrder} />
-
-                    <button onClick={() => handlePlaceOrder()}>Buy now</button>
                 </div>
 
                 <div className={classes.cartSummary}>
                     <header className={classes.cartSummaryHeader}>
-                        <h1>Items</h1>
-
-                        <button>Edit</button>
+                        <h1>{totalItems} Items</h1>
                     </header>
 
                     <div className={classes.cartSummaryDetails}>
-                        {items.map((item, index) => (
+                        {cartItems.map((item, index) => (
                             <div className={classes.cartItems} key={index}>
                                 <img src={`/assets/coffeeImage/${item.image}`} alt={item.image} />
 
@@ -64,11 +56,11 @@ function Checkout() {
                             </div>
                         ))}
 
-                        <h3>Subtotal <span>1000 lei</span></h3>
+                        <h3>Subtotal <span>{orderTotalPrice} lei</span></h3>
 
                         <h3>Delivery <span>Free</span></h3>
 
-                        <h1>Total to pay <span>1000 lei</span></h1>
+                        <h1>Total to pay <span>{orderTotalPrice} lei</span></h1>
                     </div>
                 </div>
             </div>

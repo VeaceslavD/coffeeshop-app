@@ -349,7 +349,7 @@ const products = [
         category: 'wholeBeans',
         image: 'Melitta-Bella-Crema-Speciale.webp'
     },
-]
+];
 
 export const getProducts = () => {
     return products;
@@ -360,48 +360,37 @@ export const getProductById = (id) => {
 };
 
 export const getPopularProducts = () => {
-    const selectedItems = [4, 10, 15, 25]
+    const selectedItems = [4, 10, 15, 25];
     return products.filter(product => selectedItems.includes(product.id));
-};
-
-export const getProductsByCategory = (category) => {
-    return category === 'all' ? products : products.filter(product => product.category === category);
-};
-
-export const getProductsBySearch = (search) => {
-    const lowerCaseSearch = search.toLowerCase();
-    return products.filter(product => (product.brand || product.name).toLowerCase().includes(lowerCaseSearch));
-};
-
-export const getProductsBySort = (products, sort) => {
-    if (sort === 'maxMin') {
-        return [...products].sort((a, b) => b.price - a.price);
-    };
-
-    if (sort === 'minMax') {
-        return [...products].sort((a, b) => a.price - b.price);
-    };
 };
 
 export const getProductsByFilters = (filters) => {
     let filteredProducts = getProducts();
 
     if (filters.sort) {
-        filteredProducts = getProductsBySort(filteredProducts, filters.sort);
-    };
+        if (filters.sort === 'maxMin') {
+            filteredProducts = [...filteredProducts].sort((a, b) => b.price - a.price);
+        } else if (filters.sort === 'minMax') {
+            filteredProducts = [...filteredProducts].sort((a, b) => a.price - b.price);
+        }
+    }
 
     if (filters.brand) {
-        filteredProducts = products.filter(product => product.brand === filters.brand);
-    };
+        filteredProducts = filteredProducts.filter(product => product.brand === filters.brand);
+    }
 
     if (filters.category) {
-        filteredProducts = products.filter(product => product.category === filters.category);
-    };
+        filteredProducts = filters.category === 'all' ? filteredProducts : filteredProducts.filter(product => product.category === filters.category);
+    }
 
     if (filters.weight) {
-        filteredProducts = products.filter(product => product.weight === filters.weight);
-    };
-    
+        filteredProducts = filteredProducts.filter(product => product.weight === filters.weight);
+    }
+
+    if (filters.searchValue) {
+        const lowerCaseSearch = filters.searchValue.toLowerCase();
+        filteredProducts = filteredProducts.filter(product => (product.brand || product.name || product.description).toLowerCase().includes(lowerCaseSearch));
+    }
+
     return filteredProducts;
 };
-

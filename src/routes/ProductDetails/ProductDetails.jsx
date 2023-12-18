@@ -1,9 +1,9 @@
 import classes from "./ProductDetails.module.css";
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProductById } from "../Products/products.services";
-import { CartContext } from "../../contexts/cart.context";
-
+import { getProductById } from "../../services/products.services";
+import { CartContext } from "../../contexts/CartContext";
+ 
 function ProductDetails() {
     const [product, setProduct] = useState();
     const { id } = useParams();
@@ -13,7 +13,7 @@ function ProductDetails() {
         const foundProduct = getProductById(+id);
 
         setProduct(foundProduct);
-    }, [id])
+    }, [id]);
 
     const addProductToCart = (product) => {
         cartContext.addItem(product);
@@ -24,7 +24,7 @@ function ProductDetails() {
             {product && (
                 <>
                     <div className={classes.productDetailsContainer}>
-                        <img src={(`/assets/coffeeImage/${product.image}`)}alt={product.image} />
+                        <img src={(`/assets/coffeeImage/${product.image}`)} alt={product.image} />
 
                         <div className={classes.productDetails}>
                             <h1>{product.name}</h1>
@@ -37,19 +37,30 @@ function ProductDetails() {
 
                             <div className={classes.productSpecifications}>
                                 <h3>Specifications</h3>
-
-                                <ul>
-                                    <li>Beans</li>
-                                    <li>{product.beans}</li>
-                                    <li>Flavor</li>
-                                    <li>{product.flavor}</li>
-                                    <li>Weight</li>
-                                    <li>{product.weight}</li>
-                                    <li>Country</li>
-                                    <li>{product.country}</li>
-                                    <li>Brand</li>
-                                    <li>{product.brand}</li>
-                                </ul>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Beans</td>
+                                            <td>{product.beans}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Flavor</td>
+                                            <td>{product.flavor}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Weight</td>
+                                            <td>{product.weight}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Country</td>
+                                            <td>{product.country}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brand</td>
+                                            <td>{product.brand}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>

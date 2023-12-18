@@ -1,0 +1,110 @@
+.cartItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #fff;
+  padding: 20px 30px;
+}
+
+.cartItem img {
+  max-height: 200px;
+  background: #eee;
+}
+
+.cartItemDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cartItemDetails h2 {
+  color: #bb834c;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0;
+}
+
+.cartItemDetails h1 {
+  color: #000;
+  font-family: Overlock;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.aboutItem {
+  display: flex;
+  gap: 25px;
+}
+
+.aboutItem h3 {
+  color: #000;
+  font-family: Overlock;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  gap: 10px;
+}
+
+.aboutItem h3 span {
+  color: #a29696;
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
+.saveForLater {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #000;
+  font-family: Overlock;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cartItemQuantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cartItemQuantity button {
+  padding: 5px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  background: #eee;
+  font-size: 16px;
+  width: 30px;
+}
+
+.saveForLater:hover {
+  background: #bb834c;
+  color: #fff;
+  transition: color 0.6s ease;
+}
+
+.deleteItem {
+  padding: 5px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.deleteIcon{
+  color: #000;
+  font-size: 28px;
+}

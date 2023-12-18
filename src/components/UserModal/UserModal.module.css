@@ -1,0 +1,113 @@
+.userModal {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 40px;
+  right: -14px;
+  z-index: 2;
+  transform-origin: top;
+  transform: scaleY(1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.userModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  background: #eee;
+}
+
+.userModalHeader h1 {
+  color: #000;
+  font-size: 20px;
+}
+
+.userModalHeader h2 {
+  color: #000;
+  font-family: League Spartan;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.userModalHeader button {
+  color: #000;
+  font-family: League Spartan;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  border: 0;
+  cursor: pointer;
+}
+
+.userModalHeader button:hover {
+  color: #0770cf;
+}
+
+.userModalHeader a {
+  color: #000;
+  font-family: League Spartan;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.userModalHeader a:hover {
+  text-decoration-line: revert-layer;
+  color: #0770cf;
+}
+
+.closeModal {
+  font-size: 25px;
+  color: #666;
+  cursor: pointer;
+}
+
+.closeModal:hover {
+  color: rgb(156, 5, 5);
+}
+
+.userServiceAccount {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background: #f8f8f8;
+}
+
+.userServiceAccount a {
+  color: #000000bd;
+  font-family: League Spartan;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userServiceAccount a:hover {
+  color: #0770cf;
+}
+
+.signOutLink {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.authenticationLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

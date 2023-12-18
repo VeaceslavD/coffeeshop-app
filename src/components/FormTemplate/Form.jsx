@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import classes from "./Form.module.css"
 
 function Form(props) {
@@ -14,18 +14,21 @@ function Form(props) {
     };
     const [inputValue, setInputValue] = useState(userDetails);
 
-    useEffect(() => {
-        props.handlePlaceOrder(inputValue);
-    }, [inputValue])
+    function handleSubmit(event) {
+        event.preventDefault();
 
+        props.handlePlaceOrder(inputValue);
+    };
 
     return (
-        <form className={classes.form}>
+        <form onSubmit={handleSubmit} className={classes.form}>
             <div className={classes.deliveryAddress}>
                 <div className={classes.deliveryInfo}>
                     <div className={classes.about}>
-                        <label htmlFor="First Name">First Name *</label>
+                        <label htmlFor="firstName">First Name *</label>
                         <input type="text"
+                            name="firstName"
+                            required
                             value={inputValue.fName}
                             placeholder="First Name..."
                             onChange={(event) => setInputValue({ ...inputValue, fName: event.target.value })}
@@ -33,8 +36,10 @@ function Form(props) {
                     </div>
 
                     <div className={classes.about}>
-                        <label htmlFor="Last Name">Last Name *</label>
+                        <label htmlFor="lastName">Last Name *</label>
                         <input type="text"
+                            name="lastName"
+                            required
                             value={inputValue.lName}
                             placeholder="Last Name..."
                             onChange={(event) => setInputValue({ ...inputValue, lName: event.target.value })}
@@ -43,8 +48,10 @@ function Form(props) {
                 </div>
 
                 <div className={classes.city}>
-                    <label htmlFor="">City *</label>
+                    <label htmlFor="city">City *</label>
                     <input type="text"
+                        name="city"
+                        required
                         value={inputValue.city}
                         placeholder="City..."
                         onChange={(event) => setInputValue({ ...inputValue, city: event.target.value })}
@@ -52,8 +59,10 @@ function Form(props) {
                 </div>
 
                 <div className={classes.address}>
-                    <label htmlFor="Address">Address *</label>
+                    <label htmlFor="address">Address *</label>
                     <input type="text"
+                        name="address"
+                        required
                         value={inputValue.address}
                         placeholder="Address..."
                         onChange={(event) => setInputValue({ ...inputValue, address: event.target.value })}
@@ -63,7 +72,9 @@ function Form(props) {
                 <div className={classes.deliveryInfo}>
                     <div className={classes.about}>
                         <label htmlFor="mobile">Mobile *</label>
-                        <input type="text"
+                        <input type="tel"
+                            name="mobile"
+                            required
                             value={inputValue.mobile}
                             placeholder="Mobile ..."
                             onChange={(event) => setInputValue({ ...inputValue, mobile: event.target.value })}
@@ -71,8 +82,10 @@ function Form(props) {
                     </div>
 
                     <div className={classes.about}>
-                        <label htmlFor="emaiAddress">Email address*</label>
-                        <input type="text"
+                        <label htmlFor="email">Email address*</label>
+                        <input type="email"
+                            name="email"
+                            required
                             value={inputValue.emailAddress}
                             placeholder="Email address ..."
                             onChange={(event) => setInputValue({ ...inputValue, emailAddress: event.target.value })}
@@ -102,6 +115,8 @@ function Form(props) {
                     </select>
                 </div>
             </div>
+
+            <button type="submit">Buy now</button>
         </form>
     )
 };

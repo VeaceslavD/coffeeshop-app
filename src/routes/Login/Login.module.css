@@ -1,0 +1,114 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  padding: 50px;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: #fff;
+  padding: 20px;
+  width: 650px;
+}
+
+.loginHeader {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.loginHeader a {
+  color: #000;
+  font-family: League Spartan;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.loginHeader a:hover {
+    color: #0770cf;
+}
+
+.loginHeader h1 {
+  font-weight: 500;
+  color: #ddd;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  width: 60%;
+}
+
+.loginForm button {
+  background: #2d2d2d;
+  color: #fff;
+  padding: 20px;
+  font-family: League Spartan;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 0;
+  width: 100%;
+  cursor: pointer;
+  /* opacity: 0.5; */
+}
+
+/* .loginContainer button:hover {
+    opacity: 1.0;
+} */
+
+.formRegister {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.formRegister label {
+  color: #000;
+  font-family: League Spartan;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.formRegister input {
+  padding: 15px 8px;
+  color: #666;
+  font-family: League Spartan;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+.formRegister input:focus {
+  border-color: #0770cf;
+  box-shadow: inset 0px 0px 3px 1px #0770cf;
+  outline: none;
+}

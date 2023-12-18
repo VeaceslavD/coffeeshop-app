@@ -65,15 +65,40 @@
   cursor: pointer;
 }
 
-.buttonActions img {
-  width: 30px;
-  height: 30px;
+.buttonActions .productCardIconCart {
+  font-size: 25px;
+  padding: 5px;
+  border: 1px solid #6c6c6c;
+  border-radius: 3px;
+  color: #666;
+}
+
+.favoriteButton {
+  background: none;
+}
+
+.productCardIconFavorite {
+  font-size: 25px;
+  padding: 5px;
+  border: 1px solid #6c6c6c;
+  border-radius: 3px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.favoriteButton:hover .productCardIconFavoriteSolid {
+  display: block;
+}
+
+.favoriteButton:hover .productCardIconFavorite {
+  display: none;
+}
+
+.productCardIconFavoriteSolid {
+  display: none;
+  color: #000;
+  font-size: 25px;
   padding: 5px;
   border: 1px solid #6c6c6c;
   border-radius: 3px;
 }
-
-.buttonActions img:hover {
-  background:#ddd;
-}
-

@@ -1,0 +1,26 @@
+.popularProducts {
+  display: flex;
+  flex-direction: column;
+  gap: 74px;
+  align-items: center;
+  padding: 40px 0px;
+}
+
+.popularProducts h1 {
+  color: #000;
+  font-family: Lora;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.popularProductsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  background: rgba(243, 238, 232, 0.3);
+  padding: 20px;
+}

@@ -31,22 +31,6 @@
   background: #fff;
 }
 
-.shippingInfo button {
-  background: #018849;
-  color: #fff;
-  font-family: Inter;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border: 0;
-  width: 100%;
-  padding: 10px;
-  cursor: pointer;
-}
-
 .cartSummary {
   display: flex;
   flex-direction: column;

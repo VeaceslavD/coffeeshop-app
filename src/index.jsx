@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { CartProvider } from './contexts/cart.context';
-import { FavoriteProvider } from './contexts/favorite.context';
+import { CartProvider } from './contexts/CartContext';
+import { FavoriteProvider } from './contexts/FavoriteContext';
+import { UserProvider } from './contexts/UserContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CartProvider>
+    <UserProvider>
+      <CartProvider>
         <FavoriteProvider>
           <App />
         </FavoriteProvider>
-    </CartProvider>
+      </CartProvider>
+    </UserProvider>
   </React.StrictMode>
 );
