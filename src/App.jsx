@@ -11,10 +11,17 @@ import Checkout from './routes/Checkout/Checkout';
 import OrderConfirmation from './routes/OrderConfirmation/OrderConfirmation';
 import SignUp from './routes/SignUp/SignUp';
 import Login from './routes/Login/Login';
+import MyAccount from './routes/MyAccount/MyAccount';
+import UserOrders from './routes/UserOrders/UserOrders';
+import UserOrderDetails from './routes/UserOrderDetails/UserOrderDetails';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
+import UserDetails from './routes/UserDetails/UserDetails';
+import ManageUsers from './routes/ManageUsers/ManageUsers';
+import EditUser from './routes/EditUser/EditUser';
+import ViewUser from './routes/ViewUser/ViewUser';
 
 
 function App() {
@@ -34,6 +41,13 @@ function App() {
             <Route path='/confirmation/:id' Component={OrderConfirmation} />
             <Route path='/login' Component={Login} />
             <Route path='/sign-up' Component={SignUp} />
+            <Route path='/my-account' Component={MyAccount} />
+            <Route path='/my-account/orders' Component={UserOrders} />
+            <Route path='/my-account/orders/:id' Component={UserOrderDetails} />
+            <Route path='/my-account/my-details' Component={UserDetails} />
+            <Route path='/manage-users' Component={ManageUsers} />
+            <Route path='/manage-users/editUser/:id' Component={EditUser} />
+            <Route path='/manage-users/viewUser/:id' Component={ViewUser} />
           </Routes>
 
           <Footer />

@@ -8,10 +8,13 @@ function NavBar() {
     const navigate = useNavigate();
 
     const handleSearch = () => {
+        if (inputValue === '') {
+            return null;
+        }
         navigate(`/products/all?search=${inputValue}`);
         setInputValue('');
     };
-    
+
     return (
         <nav className={classes.navContainer}>
             <ul>

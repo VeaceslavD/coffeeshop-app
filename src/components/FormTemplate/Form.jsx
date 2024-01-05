@@ -2,17 +2,7 @@ import { useState } from "react";
 import classes from "./Form.module.css"
 
 function Form(props) {
-    const userDetails = {
-        fName: '',
-        lName: '',
-        city: '',
-        address: '',
-        mobile: '',
-        emailAddress: '',
-        userMessage: '',
-        paymentMethod: '',
-    };
-    const [inputValue, setInputValue] = useState(userDetails);
+    const [inputValue, setInputValue] = useState({});
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -23,29 +13,56 @@ function Form(props) {
     return (
         <form onSubmit={handleSubmit} className={classes.form}>
             <div className={classes.deliveryAddress}>
-                <div className={classes.deliveryInfo}>
-                    <div className={classes.about}>
-                        <label htmlFor="firstName">First Name *</label>
-                        <input type="text"
-                            name="firstName"
-                            required
-                            value={inputValue.fName}
-                            placeholder="First Name..."
-                            onChange={(event) => setInputValue({ ...inputValue, fName: event.target.value })}
-                        />
-                    </div>
+                {props.currentUser === null && (
+                    <>
+                        <div className={classes.deliveryInfo}>
+                            <div className={classes.about}>
+                                <label htmlFor="firstName">First Name *</label>
+                                <input type="text"
+                                    name="firstName"
+                                    required
+                                    value={inputValue.fName}
+                                    placeholder="First Name..."
+                                    onChange={(event) => setInputValue({ ...inputValue, firstName: event.target.value })}
+                                />
+                            </div>
 
-                    <div className={classes.about}>
-                        <label htmlFor="lastName">Last Name *</label>
-                        <input type="text"
-                            name="lastName"
-                            required
-                            value={inputValue.lName}
-                            placeholder="Last Name..."
-                            onChange={(event) => setInputValue({ ...inputValue, lName: event.target.value })}
-                        />
-                    </div>
-                </div>
+                            <div className={classes.about}>
+                                <label htmlFor="lastName">Last Name *</label>
+                                <input type="text"
+                                    name="lastName"
+                                    required
+                                    value={inputValue.lName}
+                                    placeholder="Last Name..."
+                                    onChange={(event) => setInputValue({ ...inputValue, lastName: event.target.value })}
+                                />
+                            </div>
+                        </div>
+
+                        <div className={classes.deliveryInfo}>
+                            <div className={classes.about}>
+                                <label htmlFor="mobile">Mobile *</label>
+                                <input type="tel"
+                                    name="mobile"
+                                    required
+                                    value={inputValue.mobile}
+                                    placeholder="Mobile ..."
+                                    onChange={(event) => setInputValue({ ...inputValue, phone: event.target.value })}
+                                />
+                            </div>
+
+                            <div className={classes.about}>
+                                <label htmlFor="email">Email address*</label>
+                                <input type="email"
+                                    name="email"
+                                    required
+                                    value={inputValue.emailAddress}
+                                    placeholder="Email address ..."
+                                    onChange={(event) => setInputValue({ ...inputValue, emailAddress: event.target.value })}
+                                />
+                            </div>
+                        </div>
+                    </>)}
 
                 <div className={classes.city}>
                     <label htmlFor="city">City *</label>
@@ -69,30 +86,6 @@ function Form(props) {
                     />
                 </div>
 
-                <div className={classes.deliveryInfo}>
-                    <div className={classes.about}>
-                        <label htmlFor="mobile">Mobile *</label>
-                        <input type="tel"
-                            name="mobile"
-                            required
-                            value={inputValue.mobile}
-                            placeholder="Mobile ..."
-                            onChange={(event) => setInputValue({ ...inputValue, mobile: event.target.value })}
-                        />
-                    </div>
-
-                    <div className={classes.about}>
-                        <label htmlFor="email">Email address*</label>
-                        <input type="email"
-                            name="email"
-                            required
-                            value={inputValue.emailAddress}
-                            placeholder="Email address ..."
-                            onChange={(event) => setInputValue({ ...inputValue, emailAddress: event.target.value })}
-                        />
-                    </div>
-                </div>
-
                 <div className={classes.additionalInfo}>
                     <label htmlFor="Additional Information">Additional Information *</label>
                     <textarea name="Additional information"
@@ -101,7 +94,7 @@ function Form(props) {
                         onChange={(event) => setInputValue({ ...inputValue, userMessage: event.target.value })}
                     ></textarea>
                 </div>
-            </div>
+            </div >
 
             <div className={classes.paymentMethod}>
                 <h1>Payment method</h1>
@@ -114,10 +107,10 @@ function Form(props) {
                         <option value="online">Online - Card</option>
                     </select>
                 </div>
-            </div>
 
+            </div >
             <button type="submit">Buy now</button>
-        </form>
+        </form >
     )
 };
 

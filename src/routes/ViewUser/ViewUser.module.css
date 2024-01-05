@@ -1,0 +1,14 @@
+.myAccount {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 0px;
+  background: #eee;
+  gap: 20px;
+}
+
+.myAccountContainer {
+  display: flex;
+  gap: 20px;
+  width: 70%;
+}

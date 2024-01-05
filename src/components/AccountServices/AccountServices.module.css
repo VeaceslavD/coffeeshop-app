@@ -1,0 +1,63 @@
+.accountServices {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 37%;
+}
+
+.accountServicesHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 40px 40px 40px 0px;
+  background: #fff;
+}
+
+.accountServicesHeader img {
+  width: 100px;
+}
+
+.accountServicesHeaderTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.accountServicesHeaderTitle h2,
+h1 {
+  color: #353434;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.services a {
+  text-decoration: none;
+}
+
+.services li {
+  padding: 20px 10px;
+  list-style: none;
+  background: #fff;
+  color: #000000bd;
+  font-family: League Spartan;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.services li:hover {
+  text-decoration: underline;
+}

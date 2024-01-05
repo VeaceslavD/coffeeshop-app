@@ -1,0 +1,71 @@
+.addUser {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  padding: 50px;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  width: 30%;
+}
+
+.formRegister {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.formRegister label {
+  color: #000;
+  font-family: League Spartan;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.formRegister input {
+  padding: 15px 8px;
+  color: #666;
+  font-family: League Spartan;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+.formRegister input:focus {
+  border-color: #0770cf;
+  box-shadow: inset 0px 0px 3px 1px #0770cf;
+  outline: none;
+}
+
+.signupForm button {
+  background: #2d2d2d;
+  color: #fff;
+  padding: 20px;
+  font-family: League Spartan;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 2px;
+  border: 0;
+  width: 100%;
+  cursor: pointer;
+  /* opacity: 0.5; */
+}

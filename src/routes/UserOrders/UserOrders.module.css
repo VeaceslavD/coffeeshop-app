@@ -1,0 +1,121 @@
+.orders {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 0px;
+  background: #eee;
+  gap: 20px;
+}
+
+.ordersContainer {
+  display: flex;
+  gap: 20px;
+  width: 70%;
+}
+
+.showOrdersDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 70%;
+}
+
+.showOrdersDetails h3 {
+  color: #00000073;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 0px 30px;
+}
+
+.showOrdersDetailsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  width: 100%;
+  background: #fff;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+.showOrdersDetailsHeader h1 {
+  color: #000;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.ordersInformation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background: #fff;
+}
+
+.ordersInformation a {
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #eee;
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.ordersInformation a:hover {
+  background: #eee;
+}
+
+.aboutOrder {
+  display: flex;
+  align-items: center;
+}
+
+.aboutOrderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.aboutOrderInfo h1 {
+  color: #000;
+  font-family: League Spartan;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.aboutOrderInfo h2 {
+  color: #000000bd;
+  font-family: League Spartan;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.aboutOrderImg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.aboutOrderImg img {
+  width: 80px;
+}

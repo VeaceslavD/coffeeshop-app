@@ -1,12 +1,20 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
+import { UserContext } from "./UserContext";
 
 export const FavoriteContext = createContext();
 
 export function FavoriteProvider(props) {
-    const [favoriteItems, setFavoriteItems] = useState(JSON.parse(localStorage.getItem('favorites') || '[]'));
+    const { currentUser, setCurrentUser } = useContext(UserContext);
+    const [favoriteItems, setFavoriteItems] = useState(JSON.parse(localStorage.getItem("favorites") || '[]'));
 
     useEffect(() => {
-        localStorage.setItem('favorites', JSON.stringify(favoriteItems));
+        if (currentUser && currentUser.favorites) {
+            setFavoriteItems(currentUser.favorites);
+        }
+    }, [currentUser]);
+    
+    useEffect(() => {
+        localStorage.setItem("favorites", JSON.stringify(favoriteItems || null));
     }, [favoriteItems]);
 
     const addFavoriteItem = (item) => {
@@ -15,17 +23,22 @@ export function FavoriteProvider(props) {
         if (findItemIndex !== -1) {
             return null;
         } else {
-            setFavoriteItems([...favoriteItems, item]);
+            const updatedFavorites = [...favoriteItems, item];
+            setFavoriteItems(updatedFavorites);
+
+            if (currentUser) {
+                setCurrentUser(prev => ({ ...prev, favorites: updatedFavorites }));
+            }
         }
     };
 
     const deleteFavoriteItem = (item) => {
-        const findIndexItem = favoriteItems.findIndex(product => product.id === item.id);
+        const updatedFavorites = favoriteItems.filter(product => product.id !== item.id);
+        setFavoriteItems(updatedFavorites);
 
-        if (findIndexItem !== -1) {
-            favoriteItems.splice(findIndexItem, 1);
+        if (currentUser) {
+            setCurrentUser(prev => ({ ...prev, favorites: updatedFavorites }));
         }
-        setFavoriteItems([...favoriteItems]);
     };
 
     const favoriteCount = favoriteItems.length;
@@ -41,5 +54,3 @@ export function FavoriteProvider(props) {
         </FavoriteContext.Provider>
     )
 };
-
-

@@ -1,22 +1,27 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import classes from "./Checkout.module.css";
 import Form from "../../components/FormTemplate/Form";
 import { CartContext } from "../../contexts/CartContext";
 import { placeOrder, orders } from "../../services/orders.services";
+import { UserContext } from "../../contexts/UserContext";
 
 function Checkout() {
-    const {items, subTotal, removeAllItems} = useContext(CartContext);
+    const { items, subTotal, removeAllItems } = useContext(CartContext);
     const navigate = useNavigate();
+    const { currentUser } = useContext(UserContext);
     const cartItems = items;
     const orderTotalPrice = subTotal;
-    const totalItems = cartItems.reduce((total, item) => total +  item.quantity, 0);
+    const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
     const handlePlaceOrder = (userDetails) => {
         const order = {
             id: orders.length + 1,
             products: cartItems,
-            userDetails: userDetails,
+            userDetails: {
+                ...currentUser,
+                ...userDetails
+            },
             orderTotalPrice: orderTotalPrice
         };
 
@@ -24,14 +29,14 @@ function Checkout() {
         navigate("/confirmation/" + order.id);
         removeAllItems();
     };
-    
+
     return (
         <div className={classes.checkout}>
             <div className={classes.checkoutContainer}>
                 <div className={classes.shippingInfo}>
                     <h1>Checkout</h1>
 
-                    <Form handlePlaceOrder={handlePlaceOrder} />
+                    <Form handlePlaceOrder={handlePlaceOrder} currentUser={currentUser} />
                 </div>
 
                 <div className={classes.cartSummary}>

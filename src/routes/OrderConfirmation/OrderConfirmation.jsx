@@ -42,11 +42,11 @@ function OrderConfirmation() {
                             <h1>Shipping To</h1>
 
                             <ul>
-                                <li>Name: <span>{order.userDetails.fName} {order.userDetails.lName}</span></li>
+                                <li>Name: <span>{order.userDetails.firstName} {order.userDetails.lastName}</span></li>
                                 <li>City: <span>{order.userDetails.city}</span></li>
                                 <li>Address: <span>{order.userDetails.address}</span></li>
                                 <li>Email address: <span>{order.userDetails.emailAddress}</span></li>
-                                <li>Phone: <span>{order.userDetails.mobile}</span></li>
+                                <li>Phone: <span>{order.userDetails.phone}</span></li>
                                 <li>User message: <span>{order.userDetails.userMessage}</span></li>
                                 <li>Payment: <span>{order.userDetails.paymentMethod}</span></li>
                             </ul>

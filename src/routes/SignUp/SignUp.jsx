@@ -14,13 +14,14 @@ function SignUp() {
         const firstName = e.target.firstName.value;
         const lastName = e.target.lastName.value;
         const email = e.target.email.value;
+        const phone = e.target.phone.value;
         const password = e.target.password.value;
         const confirmPassword = e.target.confirmPassword.value;
 
         if (password !== confirmPassword) {
             setErrorMessage('Passwords does not match!');
         } else {
-            const user = userContext.signUp(firstName, lastName, email, password);
+            const user = userContext.signUp(firstName, lastName, email, phone, password);
 
             if (user === null) {
                 setErrorMessage('Sign Up Failed!')
@@ -53,6 +54,11 @@ function SignUp() {
                     <div className={classes.formRegister}>
                         <label htmlFor="email">Email Address:</label>
                         <input type="email" placeholder="..." name="email" />
+                    </div>
+
+                    <div className={classes.formRegister}>
+                        <label htmlFor="phone">Mobile:</label>
+                        <input type="tel" placeholder="..." name="phone" />
                     </div>
 
                     <div className={classes.formRegister}>

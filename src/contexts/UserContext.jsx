@@ -1,16 +1,12 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { findUser, saveUser } from "../services/users.services";
-import { FavoriteContext } from "./FavoriteContext";
-import { CartContext } from "./CartContext";
-import { orders } from "../services/orders.services";
+import { createContext, useEffect, useState } from "react";
+import { findUser, saveOrUpdateUser } from "../services/users.services";
 
 export const UserContext = createContext();
 
 export function UserProvider(props) {
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('currentUser') || null));
     const [userModal, setUserModal] = useState(false);
-    const favoriteContext = useContext(FavoriteContext);
-    const cartContext = useContext(CartContext);
+
 
     const openUserModal = () => {
         setUserModal(true);
@@ -35,14 +31,8 @@ export function UserProvider(props) {
         }
     }, []);
 
-    const signUp = (firstName, lastName, email, password) => {
-        const user = saveUser(firstName, lastName, email, password);
-
-        user.shoppingCart = cartContext?.items;
-        user.favorites = favoriteContext?.favoriteItems;
-        user.orders = orders;
-
-        setCurrentUser(user);
+    const signUp = (firstName, lastName, email, password, phone) => {
+        const user = saveOrUpdateUser(firstName, lastName, email, password, phone);
         localStorage.setItem('currentUser', JSON.stringify(user));
         return user;
     };
@@ -60,12 +50,13 @@ export function UserProvider(props) {
     return (
         <UserContext.Provider value={{
             currentUser: currentUser,
+            setCurrentUser: setCurrentUser,
             signUp: signUp,
             signOut: signOut,
             login: login,
             userModal: userModal,
             openUserModal: openUserModal,
-            closeUserModal: closeUserModal
+            closeUserModal: closeUserModal,
         }}>
             {props.children}
         </UserContext.Provider>

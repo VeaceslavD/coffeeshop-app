@@ -1,0 +1,42 @@
+.myAccount {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 0px;
+  background: #eee;
+  gap: 20px;
+}
+
+.myAccountContainer {
+  display: flex;
+  gap: 20px;
+  width: 70%;
+}
+
+.showAccountDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #353434;
+  width: 70%;
+}
+
+.showAccountDetails h1 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 10px 20px;
+}
+
+.showAccountDetails h2 {
+  color: #fff;
+  font-family: Overlock;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 20px 20px;
+}

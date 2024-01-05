@@ -7,7 +7,7 @@ import { CartContext } from "../../contexts/CartContext";
 function ProductDetails() {
     const [product, setProduct] = useState();
     const { id } = useParams();
-    const cartContext = useContext(CartContext);
+    const {addItem, openCartModal }= useContext(CartContext);
 
     useEffect(() => {
         const foundProduct = getProductById(+id);
@@ -16,7 +16,8 @@ function ProductDetails() {
     }, [id]);
 
     const addProductToCart = (product) => {
-        cartContext.addItem(product);
+        addItem(product);
+        openCartModal();
     };
 
     return (
