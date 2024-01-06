@@ -20,35 +20,41 @@ if (!users.some(user => user.email === admin.email)) {
 
 localStorage.setItem('users', JSON.stringify(users));
 
-export const saveOrUpdateUser = (firstName, lastName, email, phone, password) => {
-    if (userExistsByEmail(email)) {
-        return null;
+export const saveOrUpdateUser = (user) => {
+    if (user.id) {
+        let existingUser = findUserById(user.id);
+
+        if (existingUser) {
+            existingUser.firstName = user.firstName;
+            existingUser.lastName = user.lastName;
+            existingUser.phone = user.phone;
+            existingUser.password = user.password;
+            localStorage.setItem('users', JSON.stringify(users));
+            return existingUser;
+        }
     }
 
-    const existingUser = users.find(user => user.email === email);
-
-    if (existingUser) {
-        existingUser.firstName = firstName;
-        existingUser.lastName = lastName;
-        existingUser.phone = phone;
-        existingUser.password = password;
-        localStorage.setItem('users', JSON.stringify(users));
-        return existingUser;
+    if (userExistsByEmail(user.email)) {
+        return null;
     }
 
     const newUser = {
         id: users.length + 1,
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
         role: "user",
-        phone: phone,
-        password: password,
+        phone: user.phone,
+        password: user.password,
     };
 
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
     return newUser;
+};
+
+export const findUserById = (id) => {
+    return users.find(user => user.id === id);
 };
 
 export const getUserById = (id) => {

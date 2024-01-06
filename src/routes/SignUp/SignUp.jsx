@@ -11,19 +11,21 @@ function SignUp() {
     function handleSubmit(e) {
         e.preventDefault();
 
-        const firstName = e.target.firstName.value;
-        const lastName = e.target.lastName.value;
-        const email = e.target.email.value;
-        const phone = e.target.phone.value;
-        const password = e.target.password.value;
-        const confirmPassword = e.target.confirmPassword.value;
+        const user = {
+            firstName: e.target.firstName.value,
+            lastName: e.target.lastName.value,
+            email: e.target.email.value,
+            phone: e.target.phone.value,
+            password: e.target.password.value,
+            confirmPassword: e.target.confirmPassword.value,
+        }
 
-        if (password !== confirmPassword) {
+        if (user.password !== user.confirmPassword) {
             setErrorMessage('Passwords does not match!');
         } else {
-            const user = userContext.signUp(firstName, lastName, email, phone, password);
+            const createdUser = userContext.signUp(user);
 
-            if (user === null) {
+            if (createdUser === null) {
                 setErrorMessage('Sign Up Failed!')
             } else {
                 navigate('/')

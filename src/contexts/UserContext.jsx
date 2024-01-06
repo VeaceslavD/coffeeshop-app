@@ -31,10 +31,10 @@ export function UserProvider(props) {
         }
     }, []);
 
-    const signUp = (firstName, lastName, email, password, phone) => {
-        const user = saveOrUpdateUser(firstName, lastName, email, password, phone);
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        return user;
+    const signUp = (user) => {
+        const createdUser = saveOrUpdateUser(user);
+        localStorage.setItem('currentUser', JSON.stringify(createdUser));
+        return createdUser;
     };
 
     const signOut = () => {
