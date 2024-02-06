@@ -1,14 +1,134 @@
-.myAccount {
+.viewUser {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding: 50px 0px;
-  background: #eee;
-  gap: 20px;
+  width: 100%;
+  background-color: rgba(221, 183, 114, 0.2);
 }
 
-.myAccountContainer {
+.viewUserContainer {
+  max-width: 1440px;
+  width: 100%;
+  padding: 26px 80px;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.viewUserContainerHeader {
+  display: flex;
+}
+
+.viewUserContainerHeader h2 {
+  color: #432010;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.viewUserInformation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.userInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 30%;
+}
+
+.userInformation h3 {
+  color: #432010;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.userInformation table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #432010;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #432010;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+th {
+  background-color: rgba(221, 183, 114, 0.2);
+}
+
+.userOrders {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-  width: 70%;
+  width: 60%;
+}
+
+.userOrders h3 {
+  color: #432010;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 1280px) {
+  .viewUserContainer {
+    padding: 26px 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .viewUserContainer {
+    padding: 26px 50px;
+  }
+  .viewUserInformation {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .userInformation {
+    width: 100%;
+  }
+  .userOrders {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .viewUserContainer {
+    padding: 26px 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .viewUserContainer {
+    padding: 15px 10px;
+  }
 }

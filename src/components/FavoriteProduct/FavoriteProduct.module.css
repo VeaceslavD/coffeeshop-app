@@ -3,9 +3,9 @@
   flex-direction: column;
   align-items: center;
   padding: 8px;
-  width: 300px;
+  max-width: 250px;
   background: #fff;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 10px;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .imgContainer img {
-  width: 250px;
+  max-width: 100%;
 }
 
 .deleteItem {
@@ -25,13 +25,14 @@
 .iconDelete {
   font-size: 25px;
   position: absolute;
-  color: #666;
-  top: -1px;
-  right: -17px;
+  color: #432010;
+  top: 0;
+  right: 7px;
 }
 
 .iconDelete:hover {
   color: red;
+  font-size: 27px;
 }
 
 .favoriteItemsDetails {
@@ -43,18 +44,18 @@
 }
 
 .favoriteItemsDetails h2 {
-  color: #000;
-  font-family: Overlock;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  color: #432010;
   text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .favoriteItemsDetails p {
   color: #666;
-  font-family: League Spartan;
+  font-family: Inter;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
@@ -72,11 +73,10 @@
 
 .favoriteItemsDetails h4 {
   color: #000;
-  font-family: League Spartan;
-  font-size: 17px;
+  font-family: Inter;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
+  font-weight: 500;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
   padding: 10px 0px;
@@ -86,7 +86,7 @@
 
 .favoriteItemsDetails h4 span {
   color: #a29696;
-  font-size: 17px;
+  font-size: 14px;
   text-transform: capitalize;
 }
 
@@ -110,4 +110,81 @@
 .favoriteItemsDetails button:hover {
   background: #018849;
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .favoriteItems {
+    max-width: 200px;
+  }
+
+  .iconDelete {
+    font-size: 20px;
+  }
+
+  .iconDelete:hover {
+    font-size: 22px;
+  }
+
+  .favoriteItemsDetails h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .favoriteItemsDetails p {
+    font-size: 14px;
+  }
+
+  .favoriteItemsDetails h3 {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .favoriteItemsDetails h4 {
+    font-size: 12px;
+  }
+
+  .favoriteItemsDetails button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .favoriteItems {
+    max-width: 150px;
+  }
+
+  .iconDelete {
+    font-size: 18px;
+  }
+
+  .iconDelete:hover {
+    font-size: 20px;
+  }
+
+  .favoriteItemsDetails h2 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .favoriteItemsDetails p {
+    font-size: 12px;
+  }
+
+  .favoriteItemsDetails h3 {
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .favoriteItemsDetails h4 {
+    font-size: 12px;
+  }
+
+  .favoriteItemsDetails h4 span {
+    font-size: 12px;
+  }
+
+  .favoriteItemsDetails button {
+    font-size: 13px;
+    padding: 5px;
+  }
 }

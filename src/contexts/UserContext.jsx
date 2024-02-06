@@ -7,7 +7,6 @@ export function UserProvider(props) {
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('currentUser') || null));
     const [userModal, setUserModal] = useState(false);
 
-
     const openUserModal = () => {
         setUserModal(true);
     };
@@ -34,6 +33,7 @@ export function UserProvider(props) {
     const signUp = (user) => {
         const createdUser = saveOrUpdateUser(user);
         localStorage.setItem('currentUser', JSON.stringify(createdUser));
+        setCurrentUser(createdUser);
         return createdUser;
     };
 

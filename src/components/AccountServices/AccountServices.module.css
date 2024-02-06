@@ -9,12 +9,12 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 40px 40px 40px 0px;
+  padding: 40px 40px 40px 10px;
   background: #fff;
 }
 
 .accountServicesHeader img {
-  width: 100px;
+  max-width: 100px;
 }
 
 .accountServicesHeaderTitle {
@@ -25,12 +25,13 @@
 
 .accountServicesHeaderTitle h2,
 h1 {
-  color: #353434;
-  font-family: Inter;
-  font-size: 24px;
+  color: #432010;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 25px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .services {
@@ -47,12 +48,13 @@ h1 {
   padding: 20px 10px;
   list-style: none;
   background: #fff;
-  color: #000000bd;
-  font-family: League Spartan;
+  color: #432010;
+  text-align: center;
+  font-family: Poppins;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -60,4 +62,51 @@ h1 {
 
 .services li:hover {
   text-decoration: underline;
+}
+
+.signOutButtonForSmallDevices {
+  display: none;
+}
+
+.iconSignOut {
+  transform: rotateZ(-90deg);
+}
+
+@media screen and (max-width: 991px) {
+  .accountServices {
+    width: 100%;
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .signOutButtonForSmallDevices {
+    padding: 20px 10px;
+    border: 0;
+    background: #fff;
+    color: #432010;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .accountServicesHeaderTitle h2,
+  h1 {
+    font-size: 20px;
+  }
+  .services li {
+    font-size: 17px;
+  }
+
+  .signOutButtonForSmallDevices {
+    font-size: 17px;
+  }
 }

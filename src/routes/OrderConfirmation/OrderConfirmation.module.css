@@ -1,9 +1,16 @@
 .confirmation {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  width: 100%;
+}
+
+.confirmationContainer {
+  max-width: 1440px;
+  width: 100%;
+  padding: 26px 80px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 50px 0px;
   gap: 50px;
 }
 
@@ -12,25 +19,28 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  max-width: 60%;
-  text-align: center;
   padding-bottom: 50px;
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #432010;
 }
 
 .headerConfirmation h1 {
   color: #000;
-  font-family: Overlock;
+  font-family: Poppins;
   font-size: 32px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
+  text-align: center;
+}
+
+.headerConfirmation h1 span {
+  color: #432010;
 }
 
 .orderDetailsContainer {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 80%;
 }
 
 .orderDetails {
@@ -49,13 +59,13 @@
 }
 
 .orderDetails h3 {
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-align: end;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: end;
 }
 
 .productDetails {
@@ -70,6 +80,7 @@
 
 .aboutProduct {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   gap: 15px;
 }
@@ -130,4 +141,51 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+@media screen and (max-width: 1280px) {
+  .confirmationContainer {
+    padding: 26px 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .confirmationContainer {
+    padding: 26px 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .confirmationContainer {
+    padding: 26px 20px;
+  }
+
+  .headerConfirmation h1 {
+    font-size: 25px;
+  }
+
+  .orderDetailsContainer {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .orderDetails {
+    border-bottom: 1px solid #432010;
+    padding-bottom: 20px;
+  }
+
+  .orderDetails h1 {
+    font-size: 22px;
+  }
+
+  .userDetails h1 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .confirmationContainer {
+    padding: 12px 10px;
+  }
 }

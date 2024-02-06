@@ -18,16 +18,21 @@ function Favorite() {
         <>
             {favoriteItems.length > 0
                 ? (<div className={classes.favorite}>
-                    <h1>Favorite Products</h1>
-
                     <div className={classes.favoriteContainer}>
-                        {favoriteItems.map((item, index) => (
-                            <FavoriteProduct key={index}
-                                item={item}
-                                deleteFavoriteItem={deleteFavoriteItem}
-                                moveToBag={moveToBag}
-                            />
-                        ))}
+                        <header>
+                            <h1>These are your favorite products</h1>
+                            <h2>you have good taste by the way</h2>
+                        </header>
+
+                        <div className={classes.favoriteItems}>
+                            {favoriteItems.map((item, index) => (
+                                <FavoriteProduct key={index}
+                                    item={item}
+                                    deleteFavoriteItem={deleteFavoriteItem}
+                                    moveToBag={moveToBag}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>)
 

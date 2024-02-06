@@ -1,84 +1,47 @@
 import { Link, useNavigate } from "react-router-dom";
 import classes from "./SignUp.module.css";
-import { useContext, useState } from "react";
-import { UserContext } from "../../contexts/UserContext";
+import { useState } from "react";
+import UserForm from "../../components/UserForm/UserForm";
 
 function SignUp() {
-    const [errorMessage, setErrorMessage] = useState('');
-    const userContext = useContext(UserContext);
     const navigate = useNavigate();
+    const [user, setUser] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        password: "",
+        confirmPassword: "",
+    });
+    const inputFields = [
+        { label: 'First Name', type: 'text', placeholder: 'Enter first name', name: 'firstName' },
+        { label: 'Last Name', type: 'text', placeholder: 'Enter last name', name: 'lastName' },
+        { label: 'Email Address', type: 'email', placeholder: 'Enter your email', name: 'email' },
+        { label: 'Phone', type: 'tel', placeholder: 'Enter your phone', name: 'phone' },
+        { label: 'Create Password', type: 'password', placeholder: 'Create password', name: 'password' },
+        { label: 'Confirm Password', type: 'password', placeholder: 'Confirm password', name: 'confirmPassword' }
+    ];
 
-    function handleSubmit(e) {
-        e.preventDefault();
-
-        const user = {
-            firstName: e.target.firstName.value,
-            lastName: e.target.lastName.value,
-            email: e.target.email.value,
-            phone: e.target.phone.value,
-            password: e.target.password.value,
-            confirmPassword: e.target.confirmPassword.value,
-        }
-
-        if (user.password !== user.confirmPassword) {
-            setErrorMessage('Passwords does not match!');
-        } else {
-            const createdUser = userContext.signUp(user);
-
-            if (createdUser === null) {
-                setErrorMessage('Sign Up Failed!')
-            } else {
-                navigate('/')
-            }
-        }
-    }
+    function handleSubmit() {
+        navigate('/');
+    };
 
     return (
         <div className={classes.signup}>
             <div className={classes.signupContainer}>
                 <header className={classes.signupHeader}>
                     <Link to="/login">Login</Link>
-                    <h1>|</h1>
-                    <Link>Sign Up</Link>
+                    <Link to="/sign-up">Sign Up</Link>
                 </header>
 
-                <form onSubmit={handleSubmit} className={classes.signupForm}>
-                    <div className={classes.formRegister}>
-                        <label htmlFor="firstName">First Name:</label>
-                        <input type="text" placeholder="..." name="firstName" />
-                    </div>
-
-                    <div className={classes.formRegister}>
-                        <label htmlFor="lastName">Last Name:</label>
-                        <input type="text" placeholder="..." name="lastName" />
-                    </div>
-
-                    <div className={classes.formRegister}>
-                        <label htmlFor="email">Email Address:</label>
-                        <input type="email" placeholder="..." name="email" />
-                    </div>
-
-                    <div className={classes.formRegister}>
-                        <label htmlFor="phone">Mobile:</label>
-                        <input type="tel" placeholder="..." name="phone" />
-                    </div>
-
-                    <div className={classes.formRegister}>
-                        <label htmlFor="password">Password:</label>
-                        <input type="password" placeholder="..." name="password" />
-                    </div>
-
-                    <div className={classes.formRegister}>
-                        <label htmlFor="confirmPassword">Confirm Password:</label>
-                        <input type="password" placeholder="..." name="confirmPassword" />
-                    </div>
-
-                    {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-                    <button type="submit">Sign Up</button>
-                </form>
+                <UserForm user={user}
+                    setUser={setUser}
+                    inputFields={inputFields}
+                    onSubmit={handleSubmit}
+                    buttonName={'Sign Up'} />
             </div>
         </div>
-    )
+    );
 }
 
-export default SignUp; 
+export default SignUp;

@@ -5,38 +5,45 @@
   align-items: flex-start;
   background-color: #fff;
   padding: 20px 30px;
-  width: 24%;
+  width: 28%;
+  position: sticky;
 }
 
 .cartTotal h1 {
-  color: #000;
-  font-family: Overlock;
-  font-size: 25px;
+  color: #432010;
+  font-family: Poppins;
+  text-align: left;
+  font-size: 28px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 500;
+  line-height: 20px;
   padding-bottom: 30px;
   border-bottom: 1px solid #ddd;
   width: 100%;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .cartTotal h3 {
-  color: #000;
-  font-family: Overlock;
+  color: #432010;
+  font-family: Poppins;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
+
+.cartTotal h3 p {
+  color: #432010;
+  font-size: 15px;
+}
+
 .cartTotal h3 span {
   color: #a29696;
-  font-size: 17px;
+  font-size: 13px;
 }
 
 .cartTotal button {
@@ -58,31 +65,71 @@
 .payment {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
   width: 100%;
 }
 
 .payment h4 {
-  color: #000;
-  font-family: Overlock;
+  color: #432010;
+  font-family: Poppins;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
 }
 
 .imgCards {
   display: flex;
   justify-content: space-between;
-  background: #ddd;
   gap: 15px;
   padding: 5px;
 }
 
 .imgCards img {
-  width: 48px;
+  width: 38px;
 }
 
 .cartTotal button:hover {
   background-color: #006637;
 }
+
+@media screen and (max-width: 1280px) {
+  .cartTotal {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cartTotal {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .cartTotal h1 {
+    font-size: 24px;
+  }
+
+  .cartTotal h3 {
+    font-size: 16px;
+  }
+
+  .cartTotal h3 p {
+    font-size: 13px;
+  }
+
+  .cartTotal h3 span {
+    color: #a29696;
+    font-size: 13px;
+  }
+
+  .cartTotal button {
+    font-size: 15px;
+    padding: 6px;
+  }
+
+  .payment h4 {
+    font-size: 16px;
+  }
+}
+
+

@@ -1,19 +1,27 @@
 .productDetailsPage {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-  padding: 100px 0px;
+  justify-content: center;
+  width: 100%;
 }
 
 .productDetailsContainer {
+  max-width: 1440px;
+  width: 100%;
+  padding: 26px 80px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 50px;
-  max-width: 1140px;
 }
 
-.productDetailsContainer img {
-  height: 500px;
+.productInformation {
+  display: flex;
+  gap: 20px;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
   border: 1px solid #ddd;
 }
 
@@ -26,8 +34,8 @@
 
 .productDetails h1 {
   text-transform: uppercase;
-  font-family: League Spartan;
-  color: #000;
+  font-family: Poppins;
+  color: #432010;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -36,8 +44,8 @@
 
 .productDetails p {
   color: #666;
-  font-family: League Spartan;
-  font-size: 17px;
+  font-family: Poppins;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -62,14 +70,11 @@
   text-decoration: none;
   border: 0;
   cursor: pointer;
-  /* transform-origin: left; */
-  /* transform: scaleX(1); */
-  /* transition: transform 0.5s ease-in-out; */
+  transition: 0.5s ease-out;
 }
 
 .productDetails button:hover {
   background: #856443;
-  /* transform: scaleX(1); */
 }
 
 .productSpecifications {
@@ -113,11 +118,73 @@
 }
 
 .productDescription {
-  max-width: 1140px;
   color: #666;
-  font-family: League Spartan;
-  font-size: 17px;
+  font-family: Poppins;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 1280px) {
+  .productDetailsContainer {
+    padding: 26px 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productDetailsContainer {
+    padding: 26px 20px;
+  }
+  .productInformation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .productInformation p {
+    text-align: left;
+  }
+
+  .productDetails {
+    gap: 20px;
+  }
+
+  .productDescription p {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .productDetailsContainer {
+    padding: 26px 10px;
+    gap: 20px;
+  }
+
+  .productDetails {
+    gap: 20px;
+  }
+
+  .productDetails h1 {
+    font-size: 21px;
+  }
+
+  .productDetails p {
+    font-size: 11px;
+  }
+
+  .productDetails h3 {
+    font-size: 17px;
+  }
+
+  .productDetails button {
+    padding: 9.5px 20px;
+  }
+
+  .productSpecifications h3 {
+    font-size: 17px;
+  }
+
+  .productDescription {
+    font-size: 12px;
+  }
 }

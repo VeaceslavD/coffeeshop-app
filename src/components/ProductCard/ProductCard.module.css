@@ -2,12 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 23px;
-  padding: 8px;
-  width: 300px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  border: 1.5px solid rgba(221, 183, 114, 0.2);
+  border-radius: 10px 10px 0 0;
+  max-width: 250px;
 }
 
 .productCard a {
@@ -15,7 +12,7 @@
 }
 
 .productCard img {
-  width: 290px;
+  max-width: 100%;
 }
 
 .productCardInformation {
@@ -23,25 +20,28 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  background: rgba(221, 183, 114, 0.2);
+  padding: 5px 0;
 }
 
 .productCardInformation h2 {
-  color: #000;
-  font-family: Bree Serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  color: #432010;
   text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .productCardInformation h3 {
-  color: #c7a17a;
+  color: #432010;
+  text-align: center;
   font-family: Inter;
   font-size: 15px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .productCardInformation h4 {
@@ -56,7 +56,7 @@
 .buttonActions {
   display: flex;
   gap: 20px;
-  padding-top: 10px;
+  padding: 8px;
 }
 
 .buttonActions button {
@@ -67,10 +67,7 @@
 
 .buttonActions .productCardIconCart {
   font-size: 25px;
-  padding: 5px;
-  border: 1px solid #6c6c6c;
-  border-radius: 3px;
-  color: #666;
+  color: #432010;
 }
 
 .favoriteButton {
@@ -79,10 +76,7 @@
 
 .productCardIconFavorite {
   font-size: 25px;
-  padding: 5px;
-  border: 1px solid #6c6c6c;
-  border-radius: 3px;
-  color: #666;
+  color: #432010;
   transition: color 0.3s ease;
 }
 
@@ -98,7 +92,62 @@
   display: none;
   color: #000;
   font-size: 25px;
-  padding: 5px;
-  border: 1px solid #6c6c6c;
-  border-radius: 3px;
+}
+
+@media screen and (max-width: 768px) {
+  .productCard {
+    max-width: 200px;
+  }
+
+  .productCardInformation {
+    gap: 15px;
+  }
+
+  .productCardInformation h4 {
+    font-size: 13px;
+  }
+
+  .productCardInformation h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .productCardInformation h3 {
+    font-size: 14px;
+  }
+
+  .buttonActions .productCardIconCart,
+  .productCardIconFavorite,
+  .productCardIconFavoriteSolid {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .productCard {
+    max-width: 150px;
+  }
+
+  .productCardInformation {
+    gap: 10px;
+  }
+
+  .buttonActions .productCardIconCart,
+  .productCardIconFavorite,
+  .productCardIconFavoriteSolid {
+    font-size: 18px;
+  }
+
+  .productCardInformation h4 {
+    font-size: 11px;
+  }
+
+  .productCardInformation h2 {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .productCardInformation h3 {
+    font-size: 12px;
+  }
 }

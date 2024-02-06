@@ -1,0 +1,252 @@
+.aboutUs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.theBestCoffeeStore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 420px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../../public/assets/media/aboutUsimagejpg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.theBestCoffeeStore h1 {
+  max-width: 1440px;
+  width: 100%;
+  padding: 26px 80px;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.theBestCoffeeStore p {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0px 80px;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.aboutUsContainer {
+  max-width: 1440px;
+  width: 100%;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.ourCoreValues {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.ourCoreValues h2 {
+  color: #432010;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.ourCoreValues ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+
+.ourCoreValues ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #ddb772;
+  width: 48%;
+  height: 270px;
+  gap: 15px;
+}
+
+.ourCoreValues ul li h3 {
+  color: #432010;
+  font-size: 24px;
+  text-align: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.ourCoreValues ul li p {
+  color: #432010;
+  font-size: 16px;
+  text-align: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.ourGallery {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.gelleryFirstContainer {
+  width: 50%;
+  display: flex;
+  height: auto;
+}
+
+.gelleryFirstContainer img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.gellerySecondContainer {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 20px;
+}
+
+.gellerySecondContainer img {
+  width: 46%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1280px) {
+  .aboutUsContainer {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .aboutUsContainer {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutUsContainer {
+    padding: 20px;
+  }
+
+  .theBestCoffeeStore h1 {
+    font-size: 35px;
+  }
+
+  .theBestCoffeeStore p {
+    font-size: 13px;
+  }
+
+  .ourCoreValues h2 {
+    font-size: 30px;
+  }
+
+  .ourCoreValues ul li {
+    width: 100%;
+    height: 200px;
+    gap: 0;
+  }
+
+  .ourCoreValues ul li h3 {
+    font-size: 20px;
+  }
+
+  .ourCoreValues ul li p {
+    font-size: 14px;
+  }
+
+  .ourGallery {
+    flex-direction: column;
+  }
+
+  .gelleryFirstContainer {
+    width: 100%;
+  }
+
+  .gellerySecondContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .aboutUsContainer {
+    padding: 10px;
+  }
+  .theBestCoffeeStore h1 {
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  .theBestCoffeeStore p {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .ourCoreValues h2 {
+    font-size: 25px;
+  }
+
+  .ourCoreValues ul li {
+    width: 100%;
+    height: 200px;
+    gap: 0;
+  }
+
+  .ourCoreValues ul li h3 {
+    font-size: 18px;
+  }
+
+  .ourCoreValues ul li p {
+    font-size: 12px;
+  }
+
+  .ourGallery {
+    flex-direction: column;
+  }
+
+  .gelleryFirstContainer {
+    width: 100%;
+  }
+
+  .gellerySecondContainer {
+    width: 100%;
+  }
+}

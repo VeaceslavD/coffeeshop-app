@@ -1,0 +1,49 @@
+.myAccountLayout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: rgba(191, 156, 122, 1);
+}
+
+.myAccountLayoutContainer {
+  max-width: 1440px;
+  width: 100%;
+  padding: 26px 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showAccountDetails {
+  display: flex;
+  width: 60%;
+}
+
+@media screen and (max-width: 1280px) {
+  .myAccountLayoutContainer {
+    padding: 26px 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .myAccountLayoutContainer {
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .showAccountDetails {
+    width: 100%;
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .myAccountLayoutContainer {
+    padding: 26px 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .myAccountLayoutContainer {
+    padding: 26px 10px;
+  }
+}

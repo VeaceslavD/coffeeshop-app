@@ -1,9 +1,8 @@
 import classes from "./Home.module.css";
 import { useEffect, useState } from "react";
 import { getPopularProducts } from "../../services/products.services";
-import TasteCoffee from "../../components/TasteCoffee/TasteCoffee";
+import DiscoverCoffee from "../../components/DiscoverCoffee/DiscoverCoffee";
 import PopularProducts from "../../components/PopularProducts/PopularProducts";
-import Start from "../../components/Start/Start";
 import Categories from "../../components/Categories/Categories";
 
 function Home() {
@@ -17,12 +16,10 @@ function Home() {
 
     return (
         <div className={classes.home}>
-            <div className={classes.homeContainer}>
-                <TasteCoffee />
-                <PopularProducts popularProducts={popularProducts} />
-                <Start />
-                <Categories />
-            </div>
+            <DiscoverCoffee />
+            <Categories />
+            <div className={classes.picture}></div>
+            <PopularProducts popularProducts={popularProducts} />
         </div>
     );
 };

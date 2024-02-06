@@ -16,9 +16,9 @@ function Login() {
         const user = userContext.login(email, password);
 
         if (user) {
-            navigate('/')
+            navigate('/');
         } else {
-            setErrorMessage('User does not exist!')
+            setErrorMessage('Invalid email or password');
         }
     }
 
@@ -28,21 +28,21 @@ function Login() {
             <div className={classes.loginContainer}>
                 <header className={classes.loginHeader}>
                     <Link>Login</Link>
-                    <h1>|</h1>
                     <Link to="/sign-up">Sign Up</Link>
                 </header>
 
                 <form className={classes.loginForm} onSubmit={handleSubmit}>
-                    {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
                     <div className={classes.formRegister}>
                         <label htmlFor="email">Email Address:</label>
-                        <input type="text" placeholder="..." name="email" />
+                        <input type="text" placeholder="Enter your email" name="email" />
                     </div>
 
                     <div className={classes.formRegister}>
                         <label htmlFor="password">Password:</label>
-                        <input type="password" placeholder="..." name="password" />
+                        <input type="password" placeholder="Enter your password" name="password" />
                     </div>
+
+                    {errorMessage && <p className={classes.error}>{errorMessage}</p>}
 
                     <button>Sign In</button>
                 </form>

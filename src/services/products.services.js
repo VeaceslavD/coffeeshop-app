@@ -356,7 +356,23 @@ export const getProducts = () => {
 };
 
 export const getProductById = (id) => {
-    return products.find(product => product.id === id);
+    const foundProduct = products.find(product => product.id === id);
+    const defaultProduct = {
+        id: null,
+        name: '',
+        description: '',
+        short_description: '',
+        brand: '',
+        price: '',
+        weight: '',
+        country: '',
+        beans: '',
+        flavor: '',
+        category: '',
+        image: ''
+    };
+
+    return foundProduct ? foundProduct : defaultProduct;
 };
 
 export const getPopularProducts = () => {
@@ -393,4 +409,56 @@ export const getProductsByFilters = (filters) => {
     }
 
     return filteredProducts;
+};
+
+export const getProductsBySearchValue = (searchValue) => {
+    const lowerCaseSearch = searchValue.toLowerCase();
+    return products.filter(product => (product.name || product.description || product.brand).toLowerCase().includes(lowerCaseSearch));
+};
+
+export const deleteProduct = (id) => {
+    const foundIndex = products.findIndex(product => product.id === id);
+
+    if (foundIndex > -1) {
+        products.splice(foundIndex, 1);
+    }
+};
+
+export const saveOrUpdateProduct = (product) => {
+    if (product.id) {
+        const existProduct = getProductById(product.id);
+
+        if (existProduct) {
+            existProduct.name = product.name;
+            existProduct.brand = product.brand;
+            existProduct.description = product.description;
+            existProduct.short_description = product.short_description;
+            existProduct.price = product.price;
+            existProduct.weight = product.weight;
+            existProduct.country = product.country;
+            existProduct.beans = product.beans;
+            existProduct.flavor = product.flavor;
+            existProduct.category = product.category;
+            existProduct.image = product.image;
+            return existProduct;
+        }
+    }
+
+    const newProduct = {
+        id: products.length + 1,
+        name: product.name,
+        description: product.description,
+        short_description: product.short_description,
+        brand: product.brand,
+        price: product.price,
+        weight: product.weight,
+        country: product.country,
+        beans: product.beans,
+        flavor: product.flavor,
+        category: product.category,
+        image: product.image
+    }
+
+    products.push(newProduct);
+    return newProduct;
 };

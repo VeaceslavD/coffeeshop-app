@@ -1,0 +1,145 @@
+.navMenuSearch {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 99px;
+  right: 0;
+  z-index: 2;
+  transform-origin: top;
+  transform: scaleY(1);
+  transition: transform 0.5s ease-in-out;
+  background: #432010;
+}
+
+.navMenuSearchContainer {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.navContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  list-style: none;
+  flex-direction: column;
+}
+
+.navContainer li a {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchContainer input {
+  display: flex;
+  max-width: 296px;
+  padding: 11px;
+  justify-content: center;
+  align-items: center;
+  color: rgba(112, 100, 88, 0.9);
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  border-radius: 1px;
+  background: #fff;
+  border: 0;
+  outline: none;
+}
+
+.searchContainer button {
+  border: 0;
+  cursor: pointer;
+  background: #fff;
+}
+
+.searchContainer button:hover {
+  background: rgb(66, 27, 9);
+  animation: buttonAnimation 1s ease-out;
+}
+
+.searchIcon {
+  padding: 12px 30px;
+  font-size: 20px;
+  color: #432010;
+}
+
+.searchIcon:hover {
+  color: rgba(243, 238, 232, 0.815);
+}
+
+.closePopUp {
+  font-size: 30px;
+  color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navMenuSearchContainer {
+    padding: 20px;
+  }
+
+  .navMenuSearch {
+    top: 83px;
+  }
+
+  .navContainer li a {
+    font-size: 16px;
+  }
+
+  .searchContainer input {
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  .searchIcon {
+    font-size: 18px;
+    padding: 12px 15px;
+  }
+
+  .closePopUp {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .navMenuSearch {
+    top: 60px;
+  }
+
+  .navMenuSearchContainer {
+    padding: 10px;
+  }
+
+  .navContainer li a {
+    font-size: 14px;
+  }
+
+  .searchContainer input {
+    padding: 7px 5px;
+    font-size: 12px;
+  }
+
+  .searchIcon {
+    font-size: 15px;
+    padding: 7px 15px;
+  }
+
+  .closePopUp {
+    font-size: 25px;
+  }
+}

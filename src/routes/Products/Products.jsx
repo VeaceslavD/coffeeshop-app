@@ -27,7 +27,7 @@ function Products() {
 
 
     return (
-        <div className={classes.menuPage}>
+        <div className={classes.productsPage}>
             <Filters handleFilters={handleFilters} category={category} />
 
             <div className={classes.listProducts}>

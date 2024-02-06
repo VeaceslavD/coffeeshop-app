@@ -1,0 +1,218 @@
+.contactUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contactUsBackground {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../../../public/assets/media/contactBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+.contactUsBackground h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.contactUsContainer {
+  max-width: 1440px;
+  width: 100%;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.contactUsInformation {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.contactUsInformation h1 {
+  color: #432010;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.contactUsInformation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+}
+
+.contactUsInformation ul li {
+  color: #432010;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contactUsInformation ul li img {
+  width: 40px;
+}
+
+.contactUsForm {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formRegister {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.formRegister label {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.formRegister input {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  padding: 8px 8px;
+  border: 1px solid #ddd;
+}
+
+.formRegister input:focus {
+  border-color: #0770cf;
+  box-shadow: inset 0px 0px 3px 1px #0770cf;
+  outline: none;
+}
+
+.formRegister textarea {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  padding: 8px;
+  border: 1px solid #ddd;
+  height: 150px;
+}
+
+.formRegister textarea:focus {
+  border-color: #0770cf;
+  box-shadow: inset 0px 0px 3px 1px #0770cf;
+  outline: none;
+}
+
+.contactUsForm button {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 0;
+  width: 100%;
+  cursor: pointer;
+  background: #432010;
+  padding: 5px 13px;
+}
+
+@media screen and (max-width: 1280px) {
+  .contactUsContainer {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .contactUsBackground {
+    height: 350px;
+  }
+
+  .contactUsContainer {
+    padding: 50px;
+    flex-direction: column;
+  }
+
+  .contactUsInformation {
+    width: 100%;
+  }
+
+  .contactUsInformation h1 {
+    align-self: center;
+  }
+
+  .contactUsForm {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactUsBackground {
+    height: 300px;
+  }
+
+  .contactUsContainer {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .contactUsBackground h1 {
+    font-size: 35px;
+  }
+
+  .contactUsContainer {
+    padding: 10px;
+  }
+
+  .contactUsInformation h1 {
+    font-size: 25px;
+  }
+
+  .contactUsInformation ul li {
+    font-size: 16px;
+  }
+
+  .contactUsInformation ul li img {
+    width: 30px;
+  }
+}

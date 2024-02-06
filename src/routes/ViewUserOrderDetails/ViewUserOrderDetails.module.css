@@ -1,0 +1,49 @@
+.viewUserOrderDetails {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.viewUSerOrderDetailsContainer {
+  max-width: 1440px;
+  width: 100%;
+  padding: 26px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+@media screen and (max-width: 1280px) {
+  .viewUSerOrderDetailsContainer {
+    padding: 26px 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .viewUSerOrderDetailsContainer {
+    padding: 26px 50px;
+  }
+  .viewUserInformation {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .userInformation {
+    width: 100%;
+  }
+  .userOrders {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .viewUSerOrderDetailsContainer {
+    padding: 26px 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .viewUSerOrderDetailsContainer {
+    padding: 15px 10px;
+  }
+}

@@ -1,0 +1,68 @@
+.productFormFirstSide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+.formRegister {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.formRegister label {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.formRegister input {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  padding: 8px;
+  border: 1px solid #ddd;
+  
+}
+
+.formRegister input:focus {
+  border-color: #0770cf;
+  box-shadow: inset 0px 0px 3px 1px #0770cf;
+  outline: none;
+}
+
+.formRegister select {
+  padding: 8px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+.formRegister select:focus {
+  border-color: #0770cf;
+  box-shadow: inset 0px 0px 3px 1px #0770cf;
+  outline: none;
+}
+
+
+@media screen and (max-width: 991px) {
+  .productFormFirstSide {
+    width: 100%;
+  }
+}

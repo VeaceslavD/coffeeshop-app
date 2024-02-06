@@ -28,7 +28,7 @@ function CartModal() {
 
                                         <h3>{item.name}</h3>
 
-                                        <h3>Quantity: {item.quantity}</h3>
+                                        <p>Quantity: {item.quantity}</p>
                                     </div>
                                 </Link>
 
@@ -40,8 +40,8 @@ function CartModal() {
                     <h4>Sub-total: <span>{subTotal} lei</span></h4>
 
                     <div className={classes.cartModalLinks}>
-                        <Link to="/cart" onClick={closeCartModal} className={classes.viewBagLink}>View Bag</Link>
-                        <Link to="/checkout" onClick={closeCartModal} className={classes.checkoutLink}>Checkout</Link>
+                        <Link to="/cart" onClick={closeCartModal}>View Bag</Link>
+                        <Link to="/checkout" onClick={closeCartModal}>Checkout</Link>
                     </div>
                 </div>)
                 : (<div style={{ transform: `scaleY(0)` }}></div>)

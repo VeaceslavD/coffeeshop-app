@@ -39,32 +39,34 @@ function Filters(props) {
 
     return (
         <div className={classes.filters}>
-            <FilterSelect
-                label="Sort"
-                value={filters.sort}
-                options={sort}
-                onChange={(event) => setFilters({ ...filters, sort: event.target.value })} />
-
-            <FilterSelect
-                label="Brand"
-                value={filters.brand}
-                options={brands}
-                onChange={(event) => setFilters({ ...filters, brand: event.target.value })} />
-
-            <FilterSelect
-                label="Category"
-                value={filters.category}
-                options={categories}
-                onChange={(event) => setFilters({ ...filters, category: event.target.value })} />
-
-            <FilterSelect
-                label="Weight"
-                value={filters.weight}
-                options={weights}
-                onChange={(event) => setFilters({ ...filters, weight: event.target.value })} />
-
             <div className={classes.filtersContainer}>
-                <button onClick={() => setFilters(defaultFilters)}>Clear</button>
+                <FilterSelect
+                    label="Sort"
+                    value={filters.sort}
+                    options={sort}
+                    onChange={(event) => setFilters({ ...filters, sort: event.target.value })} />
+
+                <FilterSelect
+                    label="Brand"
+                    value={filters.brand}
+                    options={brands}
+                    onChange={(event) => setFilters({ ...filters, brand: event.target.value })} />
+
+                <FilterSelect
+                    label="Category"
+                    value={filters.category}
+                    options={categories}
+                    onChange={(event) => setFilters({ ...filters, category: event.target.value })} />
+
+                <FilterSelect
+                    label="Weight"
+                    value={filters.weight}
+                    options={weights}
+                    onChange={(event) => setFilters({ ...filters, weight: event.target.value })} />
+
+                <div className={classes.clearFilters}>
+                    <button onClick={() => setFilters(defaultFilters)}>Clear</button>
+                </div>
             </div>
         </div >
     )

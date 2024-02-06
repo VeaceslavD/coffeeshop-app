@@ -1,42 +1,40 @@
-.myAccount {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 50px 0px;
-  background: #eee;
-  gap: 20px;
-}
-
-.myAccountContainer {
-  display: flex;
-  gap: 20px;
-  width: 70%;
-}
-
 .showAccountDetails {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
-  background: #353434;
-  width: 70%;
+  width: 100%;
 }
 
 .showAccountDetails h1 {
   color: #fff;
-  font-family: Inter;
+  font-family: Poppins;
   font-size: 25px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  padding: 10px 20px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .showAccountDetails h2 {
-  color: #fff;
-  font-family: Overlock;
-  font-size: 25px;
+  color: #432010;
+  font-family: Poppins;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  padding: 20px 20px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 479px) {
+  .showAccountDetails h1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .showAccountDetails h2 {
+    font-size: 14px;
+    line-height: 30px;
+  }
 }

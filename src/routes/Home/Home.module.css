@@ -2,14 +2,21 @@
   display: flex;
   justify-content: center;
   width: 100%;
-}
-
-.homeContainer {
-  max-width: 1440px;
-  display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
+.picture {
+  height: 200px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../../public/assets/media/panoramic.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
+@media screen and (max-width: 479px) {
+  .picture {
+    height: 100px;
+  }
 
+}

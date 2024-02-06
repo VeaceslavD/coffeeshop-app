@@ -1,0 +1,106 @@
+.snackbar {
+  background-color: #432010;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  right: 1%;
+  bottom: 30px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.snackbar .icon {
+  font-size: 18px;
+  color: #fff;
+}
+
+.snackbar h1 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .snackbar {
+    padding: 15px;
+    font-size: 15px;
+  }
+  
+  .snackbar .icon {
+    font-size: 15px;
+  }
+  
+  .snackbar h1 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .snackbar {
+    padding: 10px;
+    font-size: 13px;
+  }
+  
+  .snackbar .icon {
+    font-size: 13px;
+  }
+  
+  .snackbar h1 {
+    font-size: 15px;
+  }
+} 

@@ -1,0 +1,101 @@
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 400px;
+}
+
+.signupForm .error {
+  color: #ff0000;
+  font-family: League Spartan;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 8px;
+  background-color: #ffeeee;
+  border: 1px solid #ff0000;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.signupForm button {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 0;
+  width: 100%;
+  cursor: pointer;
+  background: #432010;
+  padding: 5px 13px;
+}
+
+.formRegister {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.formRegister label {
+  color: #000;
+  font-family: Jost;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.formRegister input {
+  padding: 8px 8px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid #ddd;
+}
+
+.formRegister input:focus {
+  border-color: #0770cf;
+  box-shadow: inset 0px 0px 3px 1px #0770cf;
+  outline: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .signupForm {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .signupForm {
+    width: 70%;
+  }
+
+  .formRegister label {
+    font-size: 15px;
+  }
+
+  .formRegister input {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .signupForm button {
+    font-size: 14px;
+    padding: 6px 13px;
+  }
+
+  .signupForm .error {
+    font-size: 13px;
+  }
+}

@@ -3,11 +3,11 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductById } from "../../services/products.services";
 import { CartContext } from "../../contexts/CartContext";
- 
+
 function ProductDetails() {
     const [product, setProduct] = useState();
     const { id } = useParams();
-    const {addItem, openCartModal }= useContext(CartContext);
+    const { addItem, openCartModal } = useContext(CartContext);
 
     useEffect(() => {
         const foundProduct = getProductById(+id);
@@ -23,9 +23,11 @@ function ProductDetails() {
     return (
         <div className={classes.productDetailsPage}>
             {product && (
-                <>
-                    <div className={classes.productDetailsContainer}>
-                        <img src={(`/assets/coffeeImage/${product.image}`)} alt={product.image} />
+                <div className={classes.productDetailsContainer}>
+                    <div className={classes.productInformation}>
+                        <div className={classes.imageContainer}>
+                            <img src={(`/assets/coffeeImage/${product.image}`)} alt={product.image} />
+                        </div>
 
                         <div className={classes.productDetails}>
                             <h1>{product.name}</h1>
@@ -67,7 +69,7 @@ function ProductDetails() {
                     </div>
 
                     <p className={classes.productDescription}>{product.description}</p>
-                </>
+                </div>
             )}
         </div>
     )

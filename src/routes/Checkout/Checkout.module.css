@@ -1,43 +1,46 @@
 .checkout {
   display: flex;
   justify-content: center;
-  padding: 50px 0px;
-  background: #eee;
-  gap: 20px;
+  width: 100%;
+  background: rgba(221, 183, 114, 0.2);
 }
 
 .checkoutContainer {
+  max-width: 1440px;
+  width: 100%;
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  width: 80%;
+  padding: 26px 80px;
 }
 
 .shippingInfo {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 60%;
+  width: 70%;
 }
 
 .shippingInfo h1 {
-  color: #353434;
-  font-family: Inter;
-  font-size: 24px;
+  color: #432010;
+  font-family: Poppins;
+  font-size: 30px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
   padding: 20px 30px;
   background: #fff;
+  text-align: center;
 }
 
 .cartSummary {
   display: flex;
   flex-direction: column;
+  padding: 20px 10px;
   gap: 30px;
-  padding: 20px 30px;
   background: #fff;
-  width: 35%;
+  width: 28%;
 }
 
 .cartSummaryHeader {
@@ -49,36 +52,24 @@
 }
 
 .cartSummaryHeader h1 {
-  color: #000;
-  font-family: Overlock;
-  font-size: 25px;
+  color: #432010;
+  font-family: Poppins;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.cartSummaryHeader button {
-  padding: 12px 15px;
-  cursor: pointer;
-  color: #353434;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  border: 0;
-  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .cartSummaryDetails {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 5px;
 }
 
 .cartItems {
   display: flex;
+  align-items: center;
   gap: 10px;
-  padding-bottom: 30px;
 }
 
 .cartItems img {
@@ -88,40 +79,41 @@
 .cartItemsDetails {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
 }
 
 .cartItemsDetails h2 {
-  color: #0000008f;
-  font-family: Overlock;
-  font-size: 20px;
+  color: #432010;
+  font-family: Poppins;
+  font-size: 17px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .cartItemsDetails p {
-  color: #000;
-  font-family: Inter;
-  font-size: 16px;
+  color: #432010;
+  font-family: Poppins;
+  font-size: 17px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .cartItemsDetails p span {
   color: #a29696;
-  font-size: 17px;
+  font-size: 14px;
   text-transform: capitalize;
 }
 
 .cartSummaryDetails h3 {
-  color: #000000b7;
-  font-family: Spartan League;
-  font-size: 20px;
+  color: #432010;
+  font-family: Poppins;
+  font-size: 17px;
   font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  font-weight: 400;
+  line-height: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,12 +126,12 @@
 }
 
 .cartSummaryDetails h1 {
-  color: #000;
-  font-family: Spartan League;
+  color: #432010;
+  font-family: Poppins;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
+  line-height: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: flex;
@@ -149,6 +141,83 @@
 }
 
 .cartSummaryDetails h1 span {
-  color: #000;
+  color: #432010;
   font-size: 17px;
+}
+
+@media screen and (max-width: 1280px) {
+  .checkoutContainer {
+    padding: 26px 50px;
+  }
+  .shippingInfo {
+    width: 60%;
+  }
+
+  .cartSummary {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .checkoutContainer {
+    flex-direction: column;
+  }
+
+  .shippingInfo {
+    width: 100%;
+  }
+
+  .cartSummary {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .checkoutContainer {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .checkoutContainer {
+    padding: 10px;
+  }
+
+  .shippingInfo h1 {
+    font-size: 24px;
+  }
+
+  
+.cartSummary {
+  gap: 20px;
+}
+
+.cartSummaryHeader h1 {
+  font-size: 17px;
+}
+
+.cartSummaryDetails {
+  gap: 10px;
+}
+
+.cartItemsDetails h2 {
+  font-size: 15px;
+}
+
+.cartItemsDetails p {
+  font-size: 14px;
+}
+
+.cartSummaryDetails h3 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.cartSummaryDetails h3 span {
+  font-size: 15px;
+}
+
+.cartSummaryDetails h1 {
+  font-size: 17px;
+}
 }

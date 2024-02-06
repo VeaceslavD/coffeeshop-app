@@ -1,5 +1,5 @@
-import classes from "./NavBar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classes from "./NavBar.module.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -16,12 +16,15 @@ function NavBar() {
     };
 
     return (
-        <nav className={classes.navContainer}>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/products/all">Products</Link></li>
-                <li><Link to="/">Blog</Link></li>
-            </ul>
+        <div className={classes.navMenuSearch}>
+            <nav className={classes.navContainer}>
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/products/all">Products</Link></li>
+                    <li><Link to="/about-us">About Us</Link></li>
+                    <li><Link to="/contact-us">Contact Us</Link></li>
+                </ul>
+            </nav>
 
             <form className={classes.searchContainer} onSubmit={(event) => {
                 event.preventDefault();
@@ -36,7 +39,7 @@ function NavBar() {
                     <FontAwesomeIcon className={classes.searchIcon} icon="fa-solid fa-magnifying-glass" />
                 </button>
             </form>
-        </nav>
+        </div>
     )
 }
 

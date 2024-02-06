@@ -1,16 +1,28 @@
 import classes from "./CartProduct.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import DeleteModal from "../DeleteModal/DeleteModal";
 
 
 function CartProduct(props) {
-    
-    const deleteItemFromCart = () => {
-        const canDelete = window.confirm("Are you sure you want to delete the product?")
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
 
-        if (canDelete) {
-            props.deleteItem(props.item)
-        }
+    const openDeleteModal = () => {
+        setShowDeleteModal(true);
+    };
+
+    const closeDeleteModal = () => {
+        setShowDeleteModal(false);
+    };
+
+    const deleteItemFromCart = () => {
+        openDeleteModal();
+    };
+
+    const confirmDelete = () => {
+        props.deleteItem(props.item);
+        closeDeleteModal();
     };
 
     return (
@@ -44,6 +56,14 @@ function CartProduct(props) {
             <button onClick={() => deleteItemFromCart()} className={classes.deleteItem}>
                 <FontAwesomeIcon className={classes.deleteIcon} icon="fa-regular fa-circle-xmark" />
             </button>
+
+            {showDeleteModal && (
+                <DeleteModal
+                    item={props.item}
+                    onConfirm={confirmDelete}
+                    onClose={closeDeleteModal}
+                />
+            )}
         </div>
     )
 }

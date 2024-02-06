@@ -55,8 +55,6 @@ function Checkout() {
                                     <h2>{item.name}</h2>
 
                                     <p>Quantity: <span>{item.quantity}</span></p>
-
-                                    <p>Weight: <span>{item.weight}</span></p>
                                 </div>
                             </div>
                         ))}

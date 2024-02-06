@@ -1,25 +1,86 @@
 .filters {
+  background-color: #f4eff1;
   display: flex;
   justify-content: center;
   width: 100%;
-  gap: 50px;
-  background-color: rgb(238, 238, 238);
-  padding: 30px 0;
+  box-shadow: 0px -4px 20px 0px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 155px;
 }
 
-.filtersContainer button {
-  border: 1px solid #807d7d;
-  padding: 12px 15px;
+.filtersContainer {
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
+  padding: 20px 80px;
+}
+
+.clearFilters button {
+  border: 1px solid #432010;
+  padding: 13px 15px;
   cursor: pointer;
-  color: #666;
+  color: #432010;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 600;
+  background-color: #f4eff1;
 }
 
-.filtersContainer button:hover {
+.clearFilters button:hover {
   border-color: #0770cf;
   color: #0770cf;
 }
 
+@media screen and (max-width: 1280px) {
+  .filters {
+    top: 123px;
+  }
+
+  .filtersContainer {
+    padding: 20px 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .filters {
+    top: 98px;
+  }
+  .filtersContainer {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filters {
+    top: 81px;
+  }
+  .filtersContainer {
+    padding: 20px;
+  }
+
+  .clearFilters button {
+    padding: 11px 15px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .filters {
+    top: 68px;
+  }
+
+  .filtersContainer {
+    padding: 10px;
+  }
+  .clearFilters button {
+    padding: 9px;
+  }
+
+  .filtersContainer {
+    gap: 15px;
+  }
+}

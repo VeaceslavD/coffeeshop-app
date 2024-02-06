@@ -22,7 +22,7 @@ localStorage.setItem('users', JSON.stringify(users));
 
 export const saveOrUpdateUser = (user) => {
     if (user.id) {
-        let existingUser = findUserById(user.id);
+        let existingUser = getUserById(user.id);
 
         if (existingUser) {
             existingUser.firstName = user.firstName;
@@ -53,8 +53,13 @@ export const saveOrUpdateUser = (user) => {
     return newUser;
 };
 
-export const findUserById = (id) => {
-    return users.find(user => user.id === id);
+export const deleteUser = (id) => {
+    const foundIndex = users.findIndex(user => user.id === id);
+
+    if (foundIndex > -1) {
+        users.splice(foundIndex, 1);
+        localStorage.setItem('users', JSON.stringify(users));
+    }
 };
 
 export const getUserById = (id) => {
@@ -78,3 +83,9 @@ const userExistsByEmail = (email) => {
 export const findUser = (email, password) => {
     return users.find(user => user.email === email && user.password === password);
 };
+
+export const getUsersBySearchValue = (searchValue) => {
+    const lowerCaseSearch = searchValue.toLowerCase();
+    return users.filter(user => (user.firstName || user.lastName).toLowerCase().includes(lowerCaseSearch));
+};
+

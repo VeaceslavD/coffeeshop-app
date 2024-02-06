@@ -18,15 +18,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: #f8f8f8;
+  background: #432010;
 }
 
 .cartModalHeader h2 {
-  color: #000;
-  font-family: League Spartan;
-  font-size: 20px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
   text-decoration: none;
   display: flex;
@@ -34,9 +34,9 @@
 }
 
 .cartModalHeader h2 span {
-  color: #000000a4;
-  font-family: League Spartan;
-  font-size: 18px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -44,14 +44,13 @@
 
 .closeModal {
   font-size: 30px;
-  color: #666;
+  color: #fff;
   cursor: pointer;
 }
 
 .closeModal:hover {
   color: rgb(156, 5, 5);
 }
-
 
 .cartModalItems {
   display: flex;
@@ -85,27 +84,36 @@
   flex-grow: 1;
 }
 
-
 .aboutItem h2 {
   color: #000;
-  font-family: League Spartan;
-  font-size: 17px;
+  font-family: Poppins;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
 .aboutItem h3 {
-  color: #000000a4;
-  font-family: League Spartan;
-  font-size: 18px;
+  color: #432010;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.aboutItem p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
 .aboutItem:hover h2,
-.aboutItem:hover h3 {
+.aboutItem:hover h3,
+.aboutItem:hover p {
   color: #0770cf;
 }
 
@@ -146,10 +154,10 @@
   justify-content: center;
   gap: 20px;
   padding: 20px;
-  background: #eee;
+  background: #432010;
 }
 
-.cartModalLinks .viewBagLink {
+.cartModalLinks a {
   text-decoration: none;
   background: #fff;
   color: #000;
@@ -163,26 +171,80 @@
   padding: 10px;
   cursor: pointer;
 }
-.viewBagLink:hover {
-  background: #ddd;
-}
 
-.cartModalLinks .checkoutLink {
-  text-decoration: none;
-  background: #018849;
+.cartModalLinks a:hover {
   color: #fff;
-  font-family: Inter;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border: 0;
-  padding: 10px;
-  cursor: pointer;
+  background: #432010;
 }
 
-.checkoutLink:hover {
-  background-color: #006637;
+@media screen and (max-width: 1280px) {
+  .cartModal {
+    width: 300px;
+  }
+  
+  .cartModalHeader {
+    padding: 15px;
+  }
+  
+  .cartModalHeader h2 {
+    font-size: 16px;
+  }
+  
+  .cartModalHeader h2 span {
+    font-size: 15px;
+  }
+  
+  .closeModal {
+    font-size: 25px;
+  }
+  
+  .cartModalItems {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .cartModalItemsDetails img {
+    width: 100px;
+  }
+  
+  .aboutItem {
+    gap: 5px;
+  }
+  
+  .aboutItem h2 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .aboutItem h3 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .aboutItem p {
+    font-size: 14px;
+  }
+
+  .deleteItem {
+    font-size: 18px;
+  }
+  
+  .cartModalLinks {
+    padding: 10px;
+    background: #432010;
+  }
+  
+  .cartModalLinks a {
+    font-size: 14px;
+    padding: 6px;
+  }
+  
+  .cartModalLinks a:hover {
+    color: #fff;
+    background: #432010;
+  }
 }

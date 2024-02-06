@@ -1,0 +1,75 @@
+.productFormSecondSide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+.formRegister {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.formRegister label {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.formRegister input {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  padding: 8px 8px;
+  border: 1px solid #ddd;
+}
+
+.formRegister input:focus {
+  border-color: #0770cf;
+  box-shadow: inset 0px 0px 3px 1px #0770cf;
+  outline: none;
+}
+
+.formRegister textarea {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  padding: 8px;
+  border: 1px solid #ddd;
+  height: 150px;
+}
+
+.formRegister textarea:focus {
+  border-color: #0770cf;
+  box-shadow: inset 0px 0px 3px 1px #0770cf;
+  outline: none;
+}
+
+.formRegister img {
+  max-width: 40%;
+}
+
+@media screen and (max-width: 991px) {
+  .productFormSecondSide {
+    width: 100%;
+  }
+
+  .formRegister img {
+    max-width: 25%;
+  }
+}

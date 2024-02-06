@@ -9,7 +9,7 @@ function CartTotal(props) {
         <div className={classes.cartTotal}>
             <h1>Total</h1>
 
-            <h3>Sub-total<span>{props.subTotal} lei</span></h3>
+            <h3>Sub-total<p>{props.subTotal} lei</p></h3>
 
             <h3>Delivery<span>Standart delivery (Free)</span></h3>
 

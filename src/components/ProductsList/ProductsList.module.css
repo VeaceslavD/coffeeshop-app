@@ -1,0 +1,133 @@
+.manageProductsList {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  color: #432010;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+td {
+  color: #432010;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+tbody img {
+  width: 80px;
+}
+
+.viewProductButton {
+  background-color: #2196f3;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #fff;
+  font-family: Inter;
+  font-size: 13px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  text-decoration: none;
+}
+
+.viewProductButton:hover {
+  background-color: #0b7dda;
+}
+
+.editProductButton {
+  background-color: #4caf50;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #fff;
+  font-family: Inter;
+  font-size: 13px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+.editProductButton:hover {
+  background-color: #45a049;
+}
+
+.deleteProductButton {
+  background-color: #f44336;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #fff;
+  font-family: Inter;
+  font-size: 13px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  margin-left: 8px;
+}
+
+.deleteProductButton:hover {
+  background-color: #d32f2f;
+}
+
+
+@media screen and (max-width: 991px) {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  td {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .viewProductButton,
+  .editProductButton,
+  .deleteProductButton {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 6px 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  .manageProductsList {
+    padding: 10px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+}

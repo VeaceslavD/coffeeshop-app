@@ -1,23 +1,8 @@
-.orders {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 50px 0px;
-  background: #eee;
-  gap: 20px;
-}
-
-.ordersContainer {
-  display: flex;
-  gap: 20px;
-  width: 70%;
-}
-
 .showOrdersDetails {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 70%;
+  width: 100%;
 }
 
 .showOrdersDetails h3 {
@@ -54,68 +39,46 @@
   text-transform: uppercase;
 }
 
-.ordersInformation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px;
-  background: #fff;
+.showOrdersDetailsHeader a {
+  display: none;
 }
 
-.ordersInformation a {
-  text-decoration: none;
-  background: #fff;
-  border: 1px solid #eee;
-  color: #000;
-  font-family: Inter;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-transform: uppercase;
-  padding: 10px;
-  cursor: pointer;
+.showOrdersDetailsHeader a:hover {
+  background: rgba(27, 11, 4, 1);
+  color: #fff;
 }
 
-.ordersInformation a:hover {
-  background: #eee;
+@media screen and (max-width: 991px) {
+  .showOrdersDetailsHeader {
+
+  }
+
+  .showOrdersDetailsHeader a {
+    display: block;
+    border: 1px solid #807d7d;
+    padding: 12px 15px;
+    cursor: pointer;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    align-self: flex-start;
+    text-decoration: none;
+    transition: color 1s ease-out;
+  }
 }
 
-.aboutOrder {
-  display: flex;
-  align-items: center;
-}
+@media screen and (max-width: 479px) {
+  .showOrdersDetailsHeader {
+    padding: 15px;
+  }
 
-.aboutOrderInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+  .showOrdersDetailsHeader h1 {
+    font-size: 25px;
+  }
 
-.aboutOrderInfo h1 {
-  color: #000;
-  font-family: League Spartan;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.aboutOrderInfo h2 {
-  color: #000000bd;
-  font-family: League Spartan;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.aboutOrderImg {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.aboutOrderImg img {
-  width: 80px;
+  .icon {
+    font-size: 25px;
+  }
 }

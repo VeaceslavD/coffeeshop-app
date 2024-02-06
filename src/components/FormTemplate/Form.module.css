@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 20px;
 }
 
 .deliveryAddress {
@@ -27,21 +28,23 @@
 
 .about label {
   color: #000;
-  font-family: Inter;
-  font-size: 15px;
+  font-family: Jost;
+  font-size: 17px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
 }
 
 .about input {
   width: 100%;
   padding: 10px 5px;
-  border: 0;
-  background: rgba(243, 238, 232, 0.3);
-  font-family: Inter;
-  color: #666;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
   font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .city {
@@ -52,21 +55,23 @@
 
 .city label {
   color: #000;
-  font-family: Inter;
-  font-size: 15px;
+  font-family: Jost;
+  font-size: 17px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
 }
 
 .city input {
   width: 100%;
   padding: 10px 5px;
-  border: 0;
-  background: rgba(243, 238, 232, 0.3);
-  font-family: Inter;
-  color: #666;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
   font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .address {
@@ -77,21 +82,23 @@
 
 .address label {
   color: #000;
-  font-family: Inter;
-  font-size: 15px;
+  font-family: Jost;
+  font-size: 17px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
 }
 
 .address input {
   width: 100%;
   padding: 10px 5px;
-  border: 0;
-  background: rgba(243, 238, 232, 0.3);
-  font-family: Inter;
-  color: #666;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
   font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .additionalInfo {
@@ -102,22 +109,24 @@
 
 .additionalInfo label {
   color: #000;
-  font-family: Inter;
-  font-size: 15px;
+  font-family: Jost;
+  font-size: 17px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
 }
 
 .additionalInfo textarea {
   width: 100%;
   padding: 10px 5px;
-  border: 0;
-  background: rgba(243, 238, 232, 0.3);
-  font-family: Inter;
-  color: #666;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
   font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   height: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .paymentMethod {
@@ -139,10 +148,10 @@
   width: 50%;
   padding: 10px;
   color: #000;
-  font-family: Inter;
-  font-size: 15px;
+  font-family: Jost;
+  font-size: 17px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
 }
 
@@ -164,4 +173,68 @@
   width: 100%;
   padding: 10px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 479px) {
+  .deliveryInfo {
+    flex-direction: column;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .about label {
+    font-size: 15px;
+  }
+
+  .about input {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .city label {
+    font-size: 15px;
+  }
+
+  .city input {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .address label {
+    font-size: 15px;
+  }
+
+  .address input {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .additionalInfo label {
+    font-size: 15px;
+  }
+
+  .additionalInfo textarea {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .paymentMethod {
+    gap: 0;
+  }
+
+  .paymentMethodContainer{
+    padding: 20px 30px;
+  }
+
+  .paymentMethodContainer select {
+    width: 100%;
+    padding: 6px;
+    font-size: 15px;
+  }
+
+  .form button {
+    font-size: 15px;
+  }
 }

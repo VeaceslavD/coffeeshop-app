@@ -6,37 +6,43 @@ function Categories() {
         {
             type: 'wholeBeans',
             title: 'Whole Beans',
-            image: 'Robusta.png'
+            image: 'Robusta.png',
         },
         {
             type: 'groundBeans',
             title: 'Ground Beans',
-            image: 'ground-coffee.jpg'
+            image: 'ground-coffee.jpg',
         },
         {
             type: 'capsules',
             title: 'Capsules',
-            image: 'capsules.webp'
+            image: 'capsules.webp',
         }
     ];
 
     return (
         <section className={classes.categories}>
-            <h1>Top Categories</h1>
-
             <div className={classes.categoriesContainer}>
-                {categories.map((category, index) => (
-                    <Link to={`products/${category.type}`} key={index}>
-                        <div className={classes.categoriesDescription}>
-                            <img src={`/assets/media/${category.image}`} alt={category.image} />
-                            <div className={classes.typeCategories}>
-                                <h2>{category.title}</h2>
+                <div className={classes.categoriesTitle}>
+                    <h1>Our Delicious Categories</h1>
 
-                                <button>VIEW MORE</button>
+                    <p>we offer a carefully curated collection that showcases the distinct characteristics of beans sourced from specific regions.</p>
+                </div>
+
+                <div className={classes.categoriesSelect}>
+                    {categories.map((category, index) => (
+                        <Link to={`products/${category.type}`} key={index}>
+                            <div className={classes.categoriesDescription}>
+                                <img src={`/assets/media/${category.image}`} alt={category.image} />
+                                <div className={classes.typeCategories}>
+                                    <h2>{category.title}</h2>
+
+                                    <button>VIEW MORE</button>
+                                </div>
                             </div>
-                        </div>
-                    </Link>
-                ))}
+                        </Link>
+                    ))}
+                </div>
             </div>
         </section>
     )

@@ -18,7 +18,7 @@ function UserModal() {
             <header className={classes.userModalHeader}>
                 {currentUser
                     ? (<div className={classes.signOutLink}>
-                        <h2>Hello {currentUser.firstName} /</h2>
+                        <h2>Hello {currentUser.firstName}</h2>
                         <button onClick={handleSignOut}>Sign Out</button>
                     </div>)
                     : (<div className={classes.authenticationLinks}>
@@ -42,29 +42,33 @@ function UserModal() {
                     My Orders
                 </Link>
 
-                {currentUser?.role === 'admin' && (
-                    <>
-                        <Link to="/manage-users" onClick={closeUserModal}>
-                            <FontAwesomeIcon icon="fa-solid fa-gear" />
-                            Manage Users
-                        </Link>
+                {currentUser?.role === 'admin'
+                    ? (
+                        <>
+                            <Link to="/manage-users" onClick={closeUserModal}>
+                                <FontAwesomeIcon icon="fa-solid fa-gear" />
+                                Manage Users
+                            </Link>
 
-                        <Link to="/manage-products" onClick={closeUserModal}>
-                            <FontAwesomeIcon icon="fa-solid fa-gear" />
-                            Manage Products
-                        </Link>
-                    </>
-                )}
+                            <Link to="/manage-products" onClick={closeUserModal}>
+                                <FontAwesomeIcon icon="fa-solid fa-gear" />
+                                Manage Products
+                            </Link>
+                        </>
+                    ) : (
+                        <>
+                            <Link onClick={closeUserModal}>
+                                <FontAwesomeIcon icon="fa-solid fa-circle-info" />
+                                Return Information
+                            </Link>
 
-                <Link onClick={closeUserModal}>
-                    <FontAwesomeIcon icon="fa-solid fa-circle-info" />
-                    Return Information
-                </Link>
-
-                <Link onClick={closeUserModal}>
-                    <FontAwesomeIcon icon="fa-solid fa-bell" />
-                    Notification
-                </Link>
+                            <Link onClick={closeUserModal}>
+                                <FontAwesomeIcon icon="fa-solid fa-bell" />
+                                Notification
+                            </Link>
+                        </>
+                    )
+                }
             </div>
         </div>
     )
