@@ -5,7 +5,7 @@ import classes from "./ViewUserOrderDetails.module.css";
 import OrderDetails from "../../components/OrderDetails/OrderDetails";
 
 function ViewUserOrderDetails() {
-    const [order, setOrder] = useState();
+    const [order, setOrder] = useState(null);
     const { id } = useParams();
 
     useEffect(() => {

@@ -6,7 +6,6 @@ function Form(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
-
         props.handlePlaceOrder(inputValue);
     };
 

@@ -10,7 +10,6 @@ function Home() {
 
     useEffect(() => {
         const data = getPopularProducts();
-
         setPopularProducts(data);
     }, []);
 

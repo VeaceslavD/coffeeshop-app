@@ -11,22 +11,26 @@ function ManageUsers() {
     const [showDeleteModal, setShowDeleteModal] = useState(false);
     const [userToDelete, setUserToDelete] = useState(null);
 
+    // Function to handle initiating user deletion
     const handleDeleteUser = (id) => {
         setUserToDelete(id);
         setShowDeleteModal(true);
     };
 
+    // Function to confirm and execute user deletion
     const confirmDelete = () => {
         deleteUser(userToDelete);
         setUsers(getUsers());
         setShowDeleteModal(false);
     };
 
+    // Function to cancel user deletion
     const cancelDelete = () => {
         setShowDeleteModal(false);
         setUserToDelete(null);
     };
 
+    // Function to handle searching for users
     const handleSearch = (event) => {
         const value = event.target.value;
         setSearchValue(value);

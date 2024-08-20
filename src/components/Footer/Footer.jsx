@@ -55,8 +55,8 @@ function Footer() {
                         <div className={classes.information}>
                             <h2>Useful Links</h2>
                             <ul>
-                                <li>Contact Us</li>
-                                <li>About Us</li>
+                                <li><Link to="/contact-us">Contact Us</Link></li>
+                                <li><Link to="/about-us">About Us</Link></li>
                             </ul>
                         </div>
 

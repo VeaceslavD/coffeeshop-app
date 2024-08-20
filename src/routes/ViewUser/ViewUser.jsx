@@ -17,7 +17,6 @@ function ViewUser() {
         setUserDetails(prevUser => ({ ...prevUser, orders }));
     }, [id]);
 
-
     return (
         <div className={classes.viewUser}>
             <div className={classes.viewUserContainer}>

@@ -5,7 +5,6 @@ import classes from "./Products.module.css"
 import { useParams, useSearchParams } from "react-router-dom";
 import { getProductsByFilters } from "../../services/products.services";
 
-
 function Products() {
     const [products, setProducts] = useState([]);
     const { category } = useParams();
@@ -13,18 +12,19 @@ function Products() {
     const searchValue = searchParams.get('search');
 
     useEffect(() => {
+        // Handling filters when category or searchValue changes
         handleFilters({
             category: category,
             searchValue: searchValue
         })
     }, [category, searchValue]);
 
+    // Function to handle filters and update products
     const handleFilters = (filters) => {
+        // Fetching products based on filters
         const filteredProducts = getProductsByFilters(filters);
-
         setProducts(filteredProducts);
     };
-
 
     return (
         <div className={classes.productsPage}>

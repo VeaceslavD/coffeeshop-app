@@ -11,7 +11,6 @@ function ProductDetails() {
 
     useEffect(() => {
         const foundProduct = getProductById(+id);
-
         setProduct(foundProduct);
     }, [id]);
 

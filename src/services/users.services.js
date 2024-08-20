@@ -56,7 +56,7 @@ export const saveOrUpdateUser = (user) => {
 export const deleteUser = (id) => {
     const foundIndex = users.findIndex(user => user.id === id);
 
-    if (foundIndex > -1) {
+    if (foundIndex !== -1) {
         users.splice(foundIndex, 1);
         localStorage.setItem('users', JSON.stringify(users));
     }

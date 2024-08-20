@@ -14,10 +14,6 @@ import Login from './routes/Login/Login';
 import MyAccount from './routes/MyAccount/MyAccount';
 import UserOrders from './routes/UserOrders/UserOrders';
 import UserOrderDetails from './routes/UserOrderDetails/UserOrderDetails';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
 import UserDetails from './routes/UserDetails/UserDetails';
 import ManageUsers from './routes/ManageUsers/ManageUsers';
 import EditUser from './routes/EditUser/EditUser';
@@ -28,6 +24,10 @@ import ManageProducts from './routes/ManageProducts/ManageProducts';
 import EditProduct from './routes/EditProduct/EditProduct';
 import AboutUs from './routes/AboutUs/AboutUs';
 import ContactUs from './routes/ContactUs/ContactUs';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
 
 
 function App() {

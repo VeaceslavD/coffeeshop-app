@@ -15,10 +15,12 @@ export function UserProvider(props) {
         setUserModal(false);
     };
 
+    // Effect to update localStorage when currentUser changes
     useEffect(() => {
         localStorage.setItem('currentUser', JSON.stringify(currentUser || null))
     }, [currentUser]);
 
+    // Effect to check if the user stored in localStorage is valid
     useEffect(() => {
         const storageUser = JSON.parse(localStorage.getItem('currentUser') || null);
         if (storageUser) {
@@ -30,6 +32,7 @@ export function UserProvider(props) {
         }
     }, []);
 
+    // Function to sign up a new user
     const signUp = (user) => {
         const createdUser = saveOrUpdateUser(user);
         localStorage.setItem('currentUser', JSON.stringify(createdUser));
@@ -37,10 +40,12 @@ export function UserProvider(props) {
         return createdUser;
     };
 
+    // Function to sign out the current user
     const signOut = () => {
         setCurrentUser(null);
     };
 
+    // Function to log in an existing user
     const login = (email, password) => {
         const user = findUser(email, password);
         setCurrentUser(user);

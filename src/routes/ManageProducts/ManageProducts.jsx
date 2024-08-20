@@ -11,22 +11,26 @@ function ManageProducts() {
     const [showDeleteModal, setShowDeleteModal] = useState(false);
     const [productToDelete, setProductToDelete] = useState(null);
 
+    // Function to handle initiating user deletion
     const handleDeleteProduct = (id) => {
         setProductToDelete(id);
         setShowDeleteModal(true);
     };
 
+    // Function to confirm and execute user deletion
     const confirmDelete = () => {
         deleteProduct(productToDelete);
         setProducts([...getProducts()]);
         setShowDeleteModal(false);
     };
 
+    // Function to cancel user deletion
     const cancelDelete = () => {
         setShowDeleteModal(false);
         setProductToDelete(null);
     };
 
+    // Function to handle searching for users
     const handleSearch = (event) => {
         const value = event.target.value;
         setSearchValue(value);

@@ -19,7 +19,6 @@ function EditUser() {
 
     useEffect(() => {
         const existUser = getUserById(+id);
-
         setUser(existUser);
     }, [id]);
 

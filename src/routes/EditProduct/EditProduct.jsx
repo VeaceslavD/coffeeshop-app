@@ -12,13 +12,11 @@ function EditProduct() {
 
     useEffect(() => {
         const existProduct = getProductById(+id);
-
         setProduct(existProduct);
     }, [id]);
 
     function handleSaveProduct(e) {
         e.preventDefault();
-
         saveOrUpdateProduct(product);
         navigate('/manage-products');
     };
