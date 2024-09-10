@@ -21,7 +21,7 @@ export function CartProvider(props) {
 
     // Function to add an item to the cart
     const addItem = (item) => {
-        if (!item.id) {
+        if (item.id) {
             // Check if item is already in the cart
             const existingItemIndex = items.findIndex((product) => product.id === item.id);
 
